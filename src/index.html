@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngVibe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header class="content-grid full-width header">
+        <div class="header__wrapper">
+            <div class="header__logo"><img src="./images/logo.png" srcset="./images/logo@2x.png 2x" alt="Лого" class=""></div>
+            <nav class="header__nav">
+                <a href="#">Занятия 1:1</a>
+                <a href="#">Life английский</a>
+                <a href="#">Exam+</a>
+                <a href="#">Преподаватели</a>
+                <a href="#">Онлайн-тест</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Блог</a>
+            </nav>
+            <div class="header__user">
+                <a href="#" class="header__user__profile"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-user-profile"></use></svg></a>
+                <button class="button header__user__signup" type="button">Запись на урок</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-grid section section--main main">
+            <div class="full-width main__bg-wrapper">
+                <div class="main__bg is-active" style="background-image: url(./images/header-bg.jpg); --bg: './images/header-bg.jpg'"></div>
+            </div>
+            <div class="section__wrapper">
+                <h1 class="main__title">EngVibe – ваш уверенный английский</h1>
+                <p>Современное обучение, вдохновленное результатами</p>
+                <div class="main__signup-form signup-form form bg-blue">
+                    <div class="signup-form__title">Запишитесь на первый бесплатный урок</div>
+                    <div class="form__row">
+                        <input type="text" class="input input--block" placeholder="Ваше имя*">
+                    </div>
+                    <div class="form__row-inline">
+                        <input type="text" class="input" placeholder="Email*">
+                        <input type="text" class="input js-mask-phone" value="" placeholder="+7 (___) ___-__-__*">
+                    </div>
+                    <div class="form__row-inline form__row--last">
+                        <button type="button" class="button button--md">Отправить заявку</button>
+                        <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid section section--speak speak">
+            <div class="speak__title">Заговорить на первом занятии? — Легко!</div>
+            <div class="speak__subtitle">Секрет успеха наших учеников в главных принципах школы</div>
+            <div class="speak__cards">
+                <div class="speak__card bg-yellow">
+                    <div class="speak__card__title">Преподаватели профессионалы</div>
+                    <div class="speak__card__description">Владеют английским языком на высоком уровне и знают как привести вас к цели, поддержат и вдохновят</div>
+                </div>
+                <div class="speak__card bg-red">
+                    <div class="speak__card__title">Комфортная среда и современный  подход</div>
+                    <div class="speak__card__description">Дружественная атмосфера и реальная разговорная практика помогут преодалеть тот самый языковой барьер</div>
+                </div>
+                <div class="speak__card bg-blue">
+                    <div class="speak__card__left">
+                        <div class="speak__card__title">Удобно. Просто. Доступно.</div>
+                        <div class="speak__card__description">Все необходимое для занятий в одном месте - в любое время, из любой точки мира, на любом устройстве</div>
+                    </div>
+                    <div class="speak__card__slider">
+                        <img src="./images/slider-1.png">
+                        <img src="./images/slider-1.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid section section--test test">
+            <div class="section__wrapper">
+                <img src="./images/test.jpeg" class="test__image">
+                <div class="test__right">
+                    <div class="test__title">Какие занятия подойдут именно вам?</div>
+                    <div class="test__description">Пойдите короткий тест и мы поможем вам определиться с выбором курса и преподавателя, а также подарим бесплатный первый урок!</div>
+                    <button class="button button-md" type="button button-md">Начать тест</button>
+                </div>
+            </div>
+        </section>
+        <section class="section section--courses courses">
+            <div class="courses-item">
+                <img src="./images/courses-1.jpeg" srcset="./images/courses-1@2x.jpeg 2x" class="courses-item__image">
+                <div class="courses-item__right">
+                    <div class="courses-item__title text-header-3">Занятия 1:1</div>
+                    <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
+                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button></a>
+                </div>
+            </div>
+            <div class="courses-item">
+                <img src="./images/courses-2.jpeg" srcset="./images/courses-2@2x.jpeg 2x" class="courses-item__image">
+                <div class="courses-item__right">
+                    <div class="courses-item__title text-header-3">Курсы «Life  английский»</div>
+                    <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
+                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button></a>
+                </div>
+            </div>
+            <div class="courses-item">
+                <img src="./images/courses-3.jpeg" srcset="./images/courses-3@2x.jpeg 2x" class="courses-item__image">
+                <div class="courses-item__right">
+                    <div class="courses-item__title text-header-3">Exam+</div>
+                    <div class="courses-item__description">Мы знаем, что нужно для успешной сдачи экзаменов, и направляем вас на каждом этапе подготовки.</div>
+                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button></a>
+                </div>
+            </div>
+            <div class="courses-item">
+                <img src="./images/courses-4.jpeg" srcset="./images/courses-4@2x.jpeg 2x" class="courses-item__image">
+                <div class="courses-item__right">
+                    <div class="courses-item__title text-header-3">Talks club</div>
+                    <div class="courses-item__description">Улучшайте свой английский в кругу единомышленников. Обсудим актуальные темы, разберемся в грамматике или погрузимся в мир бизнес английского и не только - выбор за вами! </div>
+                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button></a>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid section section--stories stories">
+            <div class="section__wrapper">
+                <div class="stories__title text-header-2 text-center">Истории Успеха наших учеников</div>
+                <div class="stories__items">
+                    <div class="stories-item bg-red">
+                        <div class="stories-item__person">
+                            <img src="./images/person-1.png" srcset="./images/person-1@2x.png 2x" class="stories-item__person-image">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Валерия</div>
+                                <div class="stories-item__person-job text-body-2">UX/UI Дизайнер, г. Москва</div>
+                            </div>
+                        </div>
+                        <div class="stories-item__description">
+                            Начала заниматься в школе не так давно, но уже чувствуется результат. Так как моей главной проблемой было отсутствие разговорной практики, а в Skyeng я могу получать её ежедневно.
+                        </div>
+                    </div>
+                    <div class="stories-item stories-item--video bg-yellow">
+                        <a href="#" class="video" style="--bg: url('/images/video-1.jpeg')">
+                            <button type="button" class="video-play"></button>
+                        </a>
+                        <div class="stories-item__person">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Валерия</div>
+                                <div class="stories-item__person-job text-body-2">UX/UI Дизайнер, г. Москва</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stories-item bg-blue">
+                        <div class="stories-item__person">
+                            <img src="./images/person-1.png" srcset="./images/person-1@2x.png 2x" class="stories-item__person-image">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Павел</div>
+                                <div class="stories-item__person-job text-body-2">Бизнес-консультант, г. Москва</div>
+                            </div>
+                        </div>
+                        <div class="stories-item__description">
+                            Сначала мне нужно было подготовиться к собеседованию, а потом — сдать IELTS в сжатые сроки :) Спасибо большое Skyeng и моему преподавателю, без вас ничего бы не получилось.
+                        </div>
+                    </div>
+                    <div class="stories-item bg-blue">
+                        <div class="stories-item__person">
+                            <img src="./images/person-1.png" srcset="./images/person-1@2x.png 2x" class="stories-item__person-image">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Ксения</div>
+                                <div class="stories-item__person-job text-body-2">Юрист, г. Минск</div>
+                            </div>
+                        </div>
+                        <div class="stories-item__description">
+                            Я пыталась учить английский ещё в школе. Потом в универе, потом самостоятельно, но мне всегда не хватало структуры и знаний, чтобы научиться думать на английском. С такими запросом я пришла в Skyeng и занимаюсь с очень классной преподавательницей. Оказывается, английский это ещё и весело:) 
+                        </div>
+                    </div>
+                    <div class="stories-item bg-red">
+                        <div class="stories-item__person">
+                            <img src="./images/person-1.png" srcset="./images/person-1@2x.png 2x" class="stories-item__person-image">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Виктория</div>
+                                <div class="stories-item__person-job text-body-2">Digital-маркетолог, г. Санкт-Петербург</div>
+                            </div>
+                        </div>
+                        <div class="stories-item__description">
+                            Откуда я только ни выходила на уроки: дома, из офиса, из гостиницы в командировке, даже из Сапсана! Как круто, что можно заниматься везде с ноутбука, иначе найти время на занятия было бы нереально.
+                        </div>
+                    </div>
+                    <div class="stories-item stories-item--video bg-yellow">
+                        <a href="#" class="video" style="--bg: url('/images/video-1.jpeg')">
+                            <button type="button" class="video-play"></button>
+                        </a>
+                        <div class="stories-item__person">
+                            <div class="stories-item__person-info">
+                                <div class="stories-item__person-name text-header-5">Сергей</div>
+                                <div class="stories-item__person-job text-body-2">Frontend-разработчик, г. Краснодар</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stories__more">
+                    <button class="button button--md">Все истории</button>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid section section--teachers teachers">
+            <div class="section__wrapper">
+                <div class="teachers__title text-header-2 text-center">Наши преподаватели</div>
+                <div class="teachers__items">
+                    <div class="teachers-item">
+                        <div class="teachers-item__header">
+                            <div class="teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
+                            <div>
+                                <div class="audio-controls">
+                                    <div class="audio-controls__play" style="display: none;">
+                                        <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
+                                        <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                    </div>
+                                    <div class="audio-controls__pause">
+                                        <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                        <div class="audio-controls__progress">00:40</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="teachers-item__body">
+                            <div class="teachers-item__name text-header-5">Полина Козлова</div>
+                            <div class="teachers-item__experience">Опыт: 5 лет</div>
+                            <div class="teachers-item__description text-body-2">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
+                        </div>
+                        <div class="teachers-item__footer">
+                            <button class="button button-sm">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="teachers-item">
+                        <div class="teachers-item__header">
+                            <div class="teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
+                            <div>
+                                <div class="audio-controls">
+                                    <div class="audio-controls__play">
+                                        <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
+                                        <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                    </div>
+                                    <div class="audio-controls__pause" style="display: none;">
+                                        <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                        <div class="audio-controls__progress">00:40</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="teachers-item__body">
+                            <div class="teachers-item__name text-header-5">Полина Козлова</div>
+                            <div class="teachers-item__experience">Опыт: 5 лет</div>
+                            <div class="teachers-item__description text-body-2">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
+                        </div>
+                        <div class="teachers-item__footer">
+                            <button class="button button-sm">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="teachers-item">
+                        <div class="teachers-item__header">
+                            <div class="teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
+                            <div>
+                                <div class="audio-controls">
+                                    <div class="audio-controls__play">
+                                        <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
+                                        <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                    </div>
+                                    <div class="audio-controls__pause" style="display: none;">
+                                        <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                        <div class="audio-controls__progress">00:40</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="teachers-item__body">
+                            <div class="teachers-item__name text-header-5">Полина Козлова</div>
+                            <div class="teachers-item__experience">Опыт: 5 лет</div>
+                            <div class="teachers-item__description text-body-2">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
+                        </div>
+                        <div class="teachers-item__footer">
+                            <button class="button button-sm">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="teachers-item">
+                        <div class="teachers-item__header">
+                            <div class="teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
+                            <div>
+                                <div class="audio-controls">
+                                    <div class="audio-controls__play">
+                                        <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
+                                        <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                    </div>
+                                    <div class="audio-controls__pause" style="display: none;">
+                                        <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                        <div class="audio-controls__progress">00:40</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="teachers-item__body">
+                            <div class="teachers-item__name text-header-5">Полина Козлова</div>
+                            <div class="teachers-item__experience">Опыт: 5 лет</div>
+                            <div class="teachers-item__description text-body-2">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
+                        </div>
+                        <div class="teachers-item__footer">
+                            <button class="button button-sm">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="teachers-item">
+                        <div class="teachers-item__header">
+                            <div class="teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
+                            <div>
+                                <div class="audio-controls">
+                                    <div class="audio-controls__play">
+                                        <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
+                                        <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                    </div>
+                                    <div class="audio-controls__pause" style="display: none;">
+                                        <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                        <div class="audio-controls__progress">00:40</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="teachers-item__body">
+                            <div class="teachers-item__name text-header-5">Полина Козлова</div>
+                            <div class="teachers-item__experience">Опыт: 5 лет</div>
+                            <div class="teachers-item__description text-body-2">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
+                        </div>
+                        <div class="teachers-item__footer">
+                            <button class="button button-sm">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__controls">
+                    <button class="button-arrow button-arrow--left"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
+                    <button class="button-arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid section section--faq faq">
+            <div class="section__wrapper">
+                <div class="faq__title text-header-2 text-center">Частые вопросы</div>
+                <div class="faq__items">
+                    <div class="faq-item is-active">
+                        <div class="faq-item__header">
+                            <button class="button-arrow button-arrow--up button-arrow--filled faq-item__arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
+                            <div class="text-header-5">Что нужно, чтобы начать обучение?</div>
+                        </div>
+                        <div class="faq-item__body">Это вводный урок, который позволит вам освоиться. Первая часть проходит индивидуально — можно посмотреть на платформу и пройти небольшой тест, определить свой уровень английского и подобрать программу. После к вам подключится методист, чтобы ответить на вопросы, рассказать о процессе обучения и помочь сформировать расписание.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <button class="button-arrow button-arrow--down faq-item__arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
+                            <div class="text-header-5">Что нужно, чтобы начать обучение?</div>
+                        </div>
+                        <div class="faq-item__body">Это вводный урок, который позволит вам освоиться. Первая часть проходит индивидуально — можно посмотреть на платформу и пройти небольшой тест, определить свой уровень английского и подобрать программу. После к вам подключится методист, чтобы ответить на вопросы, рассказать о процессе обучения и помочь сформировать расписание.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="content-grid full-width footer bg-blue">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <div class="footer__logo"><img src="./images/logo.png" srcset="./images/logo@2x.png 2x" alt="Лого"></div>
+                <div class="footer__copyright text-body-2">
+                    © 2024 EngVibe
+                    <small>ваш уверенный английский</small>
+                </div>
+            </div>
+            <div class="footer__navs">
+                <nav class="footer__nav">
+                    <a href="#">Занятия 1:1</a>
+                    <a href="#">Life английский</a>
+                    <a href="#">Exam+</a>
+                    <a href="#">Talks club</a>
+                </nav>
+                <nav class="footer__nav">
+                    <a href="#">Преподаватели</a>
+                    <a href="#">Онлайн-тест</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Блог</a>
+                </nav>
+                <nav class="footer__nav">
+                    <a href="mailto:companyname@gmail.com">companyname@gmail.com</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </nav>
+            </div>
+            <div class="footer__right">
+                <div class="footer__socials">
+                    <a href="#" class="social-link social-link--vk"><svg class="icon-svg" viewBox="0 0 20 13"><use href="#icon-vk"></use></svg></a>
+                    <a href="#" class="social-link social-link--tg"><svg class="icon-svg" viewBox="0 0 20 18"><use href="#icon-tg"></use></svg></a>
+                    <a href="#" class="social-link social-link--whatsup"><svg class="icon-svg" viewBox="0 0 20 20"><use href="#icon-whatsup"></use></svg></a>
+                    <a href="#" class="social-link social-link--ig"><svg class="icon-svg" viewBox="0 0 20 20"><use href="#icon-ig"></use></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <g id="icon-user-profile">
+                <rect x="1.01416" y="0.75" width="30.5" height="30.5" rx="15.25" stroke="currentColor" fill="transparent" stroke-width="1.5"/>
+                <path d="M16.4242 14.87C16.3242 14.86 16.2042 14.86 16.0942 14.87C13.7142 14.79 11.8242 12.84 11.8242 10.44C11.8242 7.99 13.8042 6 16.2642 6C18.7142 6 20.7042 7.99 20.7042 10.44C20.6942 12.84 18.8042 14.79 16.4242 14.87Z" fill="currentColor"/>
+                <path d="M11.4241 18.56C9.00413 20.18 9.00413 22.82 11.4241 24.43C14.1741 26.27 18.6841 26.27 21.4341 24.43C23.8541 22.81 23.8541 20.17 21.4341 18.56C18.6941 16.73 14.1841 16.73 11.4241 18.56Z" fill="currentColor"/>
+            </g>
+            <g id="icon-audio-play">
+                <path d="M0.666626 6.00001V3.62668C0.666626 0.680011 2.75329 -0.526655 5.30663 0.946678L7.36663 2.13334L9.42663 3.32001C11.98 4.79334 11.98 7.20668 9.42663 8.68001L7.36663 9.86668L5.30663 11.0533C2.75329 12.5267 0.666626 11.32 0.666626 8.37335V6.00001Z" fill="currentColor"/>                    
+            </g>
+            <g id="icon-audio-pause">
+                <path d="M7.1 12.74V3.26C7.1 2.36 6.72 2 5.76 2H3.34C2.38 2 2 2.36 2 3.26V12.74C2 13.64 2.38 14 3.34 14H5.76C6.72 14 7.1 13.64 7.1 12.74Z" fill="currentColor"/>
+                <path d="M14 12.74V3.26C14 2.36 13.62 2 12.66 2H10.24C9.28669 2 8.90002 2.36 8.90002 3.26V12.74C8.90002 13.64 9.28002 14 10.24 14H12.66C13.62 14 14 13.64 14 12.74Z" fill="currentColor"/>                    
+            </g>
+            <g id="icon-audio-waves">
+                <path d="M1 6.43335V13.5834" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 4.0498V15.9498" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 1.66675V18.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 4.0498V15.9498" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 6.43335V13.5834" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-arrow-right">   
+                <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="transparent" />                                             
+            </g>
+            <g id="icon-vk">
+                <path d="M10.8932 12.6462C4.05996 12.6462 0.162399 7.96163 0 0.166504H3.42286C3.53529 5.88793 6.05871 8.31142 8.05746 8.8111V0.166504H11.2805V5.10092C13.2542 4.88855 15.3279 2.63996 16.0275 0.166504H19.2505C18.9869 1.44931 18.4614 2.66392 17.7069 3.73436C16.9524 4.80481 15.9852 5.70806 14.8657 6.38762C16.1153 7.00855 17.2191 7.88743 18.1041 8.96625C18.9891 10.0451 19.6353 11.2993 20 12.6462H16.4522C16.1248 11.4763 15.4594 10.4291 14.5394 9.63577C13.6194 8.84243 12.4858 8.33828 11.2805 8.18649V12.6462H10.8932Z" fill="currentColor"/>                    
+            </g>
+            <g id="icon-tg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3749 7.80175C6.74359 5.4627 10.3236 3.92065 12.1148 3.17561C17.2292 1.04836 18.2919 0.678836 18.9846 0.666634C19.1369 0.66395 19.4776 0.701706 19.6982 0.880747C19.8845 1.03193 19.9358 1.23615 19.9603 1.37948C19.9848 1.52281 20.0154 1.84933 19.9911 2.10447C19.714 5.0165 18.5147 12.0833 17.9046 15.3448C17.6465 16.7249 17.1382 17.1876 16.6461 17.2329C15.5766 17.3313 14.7645 16.5261 13.7287 15.8471C12.1078 14.7846 11.1921 14.1232 9.61879 13.0864C7.80053 11.8882 8.97923 11.2296 10.0154 10.1534C10.2866 9.87171 14.9987 5.58571 15.0899 5.1969C15.1013 5.14828 15.1119 4.96702 15.0042 4.87131C14.8965 4.7756 14.7376 4.80833 14.6229 4.83436C14.4604 4.87125 11.871 6.58272 6.85486 9.96876C6.11988 10.4735 5.45416 10.7194 4.8577 10.7065C4.20015 10.6923 2.93528 10.3347 1.99498 10.029C0.84166 9.65413 -0.074973 9.45591 0.00484519 8.81922C0.0464194 8.48759 0.503103 8.14844 1.3749 7.80175Z" fill="currentColor"/>                                  
+            </g>
+            <g id="icon-whatsup">
+                <path d="M17.0732 2.91667C15.1916 1.04167 12.6829 0 10.0348 0C4.52961 0 0.0696853 4.44444 0.0696853 9.93056C0.0696853 11.6667 0.557491 13.4028 1.39373 14.8611L0 20L5.29617 18.6111C6.75958 19.375 8.36237 19.7917 10.0348 19.7917C15.5401 19.7917 20 15.3472 20 9.86111C19.9303 7.29167 18.9547 4.79167 17.0732 2.91667ZM14.8432 13.4722C14.6341 14.0278 13.6585 14.5833 13.1707 14.6528C12.7526 14.7222 12.1951 14.7222 11.6376 14.5833C11.2892 14.4444 10.8014 14.3056 10.2439 14.0278C7.73519 12.9861 6.13241 10.4861 5.99303 10.2778C5.85366 10.1389 4.94774 8.95833 4.94774 7.70833C4.94774 6.45833 5.57491 5.90278 5.78397 5.625C5.99303 5.34722 6.27178 5.34722 6.48084 5.34722C6.62021 5.34722 6.82927 5.34722 6.96864 5.34722C7.10801 5.34722 7.31707 5.27778 7.52613 5.76389C7.73519 6.25 8.22299 7.5 8.29268 7.56944C8.36237 7.70833 8.36237 7.84722 8.29268 7.98611C8.22299 8.125 8.15331 8.26389 8.01393 8.40278C7.87456 8.54167 7.73519 8.75 7.6655 8.81944C7.52613 8.95833 7.38676 9.09722 7.52613 9.30555C7.6655 9.58333 8.15331 10.3472 8.91986 11.0417C9.89547 11.875 10.662 12.1528 10.9408 12.2917C11.2195 12.4306 11.3589 12.3611 11.4983 12.2222C11.6376 12.0833 12.1254 11.5278 12.2648 11.25C12.4042 10.9722 12.6132 11.0417 12.8223 11.1111C13.0314 11.1806 14.2857 11.8056 14.4948 11.9444C14.7735 12.0833 14.9129 12.1528 14.9826 12.2222C15.0523 12.4306 15.0523 12.9167 14.8432 13.4722Z" fill="currentColor"/>                    
+            </g>
+            <g id="icon-ig">
+                <path d="M14.5862 0H5.41381C2.42858 0 0 2.42858 0 5.41381V14.5863C0 17.5714 2.42858 20 5.41381 20H14.5863C17.5714 20 20 17.5714 20 14.5863V5.41381C20 2.42858 17.5714 0 14.5862 0V0ZM9.99998 15.4686C6.98454 15.4686 4.53139 13.0154 4.53139 9.99998C4.53139 6.98454 6.98454 4.53139 9.99998 4.53139C13.0154 4.53139 15.4686 6.98454 15.4686 9.99998C15.4686 13.0154 13.0154 15.4686 9.99998 15.4686ZM15.5993 5.82106C14.7082 5.82106 13.9834 5.09627 13.9834 4.20516C13.9834 3.31405 14.7082 2.58911 15.5993 2.58911C16.4904 2.58911 17.2154 3.31405 17.2154 4.20516C17.2154 5.09627 16.4904 5.82106 15.5993 5.82106Z" fill="currentColor"/>
+                <path d="M10 5.7041C7.63125 5.7041 5.70392 7.63128 5.70392 10.0002C5.70392 12.369 7.63125 14.2963 10 14.2963C12.3689 14.2963 14.2961 12.369 14.2961 10.0002C14.2961 7.63128 12.3689 5.7041 10 5.7041Z" fill="currentColor"/>
+                <path d="M15.5994 3.76172C15.3549 3.76172 15.1559 3.96069 15.1559 4.20514C15.1559 4.44958 15.3549 4.64856 15.5994 4.64856C15.844 4.64856 16.0429 4.44974 16.0429 4.20514C16.0429 3.96054 15.844 3.76172 15.5994 3.76172Z" fill="currentColor"/>                    
+            </g>
+        </defs>
+    </svg>
+</body>
+<script src="./js/imask.js"></script>
+<script src="./js/masonry.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
+<!-- 
+
+HTML Layout Author:
+
+Andrey Zhelezko
+EMail: because.ahaha@gmail.com
+Telegram: https://t.me/becauseahaha
+GitHub: https://github.com/becauseahaha
+
+-->

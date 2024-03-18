@@ -1,0 +1,706 @@
+@mixin absoluteCentered
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin flexCentered
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin header-1
+    line-height: 1
+    font-size: rem(61px)
+    font-weight: 700
+@mixin header-2
+    line-height: 1
+    font-size: rem(49px)
+    font-weight: 700
+@mixin header-3
+    line-height: 1
+    font-size: rem(39px)
+    font-weight: 700
+@mixin header-4
+    line-height: 1
+    font-size: rem(31px)
+    font-weight: 700
+@mixin header-5
+    line-height: 1
+    font-size: rem(25px)
+    font-weight: 600
+@mixin header-6
+    line-height: 1
+    font-size: rem(20px)
+    font-weight: 600
+@mixin subtitle-1
+    font-weight: 400
+    font-size: rem(25px)
+    line-height: 1.25
+@mixin body-1
+    font-weight: 400
+    font-size: rem(20px)
+    line-height: 1.25
+@mixin body-2
+    font-weight: 400
+    font-size: rem(16px)
+    line-height: 1.25
+
+.text-header-1
+    @include header-1
+.text-header-2
+    @include header-2
+.text-header-3
+    @include header-3
+.text-header-4
+    @include header-4
+.text-header-5
+    @include header-5
+.text-subtitle-1
+    @include subtitle-1
+.text-body-1
+    @include body-1
+.text-body-2
+    @include body-2
+
+.text-center
+    text-align: center
+
+.bg-blue
+    background-color: var(--bg-blue)
+.bg-red
+    background-color: var(--bg-red)
+.bg-yellow
+    background-color: var(--bg-yellow)
+
+a
+    color: var(--text-link)
+    &:hover
+        color: var(--text-link-hover)
+
+body
+    font-family: 'Golos Text'
+    font-optical-sizing: auto
+    @include body-1
+
+h1
+    font-weight: 700
+    font-size: rem(76px)
+    line-height: 1
+
+.social-link
+
+    @include flexCentered
+
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: #fff
+
+    &--vk
+        .icon-svg
+            width: 20px
+            height: 13px
+    &--tg
+        .icon-svg
+            width: 20px
+            height: 18px
+    &--whatsup
+        .icon-svg
+            width: 20px
+            height: 20px
+    &--ig
+        .icon-svg
+            width: 20px
+            height: 20px
+
+
+.button-arrow
+
+    @include flexCentered
+
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1.5px solid rgb(224, 224, 224)
+    color: black
+    background-color: transparent
+
+    .icon-svg
+        width: 24px
+        height: 24px
+
+    &--link
+        margin-left: 14px
+        display: inline-flex
+        width: 26.67px
+        height: 26.67px
+        border-color: currentColor
+        color: currentColor
+        .icon-svg
+            width: 14px
+            height: 14px
+
+
+    &--left
+        .icon-svg
+            transform: rotate(180deg)
+    &--down
+        .icon-svg
+            transform: rotate(90deg)
+    &--up
+        .icon-svg
+            transform: rotate(-90deg)
+
+    &--filled
+        color: #fff
+        background-color: var(--text-link)
+        &:hover
+            color: #fff
+            background-color: var(--text-link-hover)
+
+    &:hover
+        color: var(--text-link-hover)
+        border-color: var(--text-link-hover)
+
+
+.button-audio
+
+    @include flexCentered
+    
+    color: var(--text-link)
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    border: 1.5px solid var(--text-link)
+
+    background-color: #fff
+
+    &:hover
+        color: var(--text-link-hover)
+        border-color: var(--text-link-hover)
+
+    .icon-svg
+        width: 12px
+        height: 12px
+
+    &--pause
+        .icon-svg
+            width: 16px
+            height: 16px
+
+.button
+    border: none
+
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 12px 16px
+    gap: 10px
+
+    background: linear-gradient(180deg, #49AEBB 0%, #1B9AAA 100%)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+    border-radius: 12px
+
+    color: white
+    font-size: rem(16px)
+    line-height: rem(16px)
+    letter-spacing: 0.2px
+    font-weight: 600
+
+    &:hover
+        background: rgb(73, 174, 187)
+
+    &:disabled
+        opacity: 0.4
+
+    &--lg
+        padding: 24px 32px
+        font-size: rem(25px)
+        line-height: rem(32px)
+        letter-spacing: 0.5px
+    &--md
+        padding: 16px 28px
+        font-size: rem(20px)
+        line-height: rem(24px)
+
+    &--outlined
+        box-shadow: none
+        background: white
+        color: rgb(27, 154, 170)
+        border: 2px solid rgb(27, 154, 170)
+
+        &:hover
+            background: white
+            color: rgb(73, 174, 187)
+            border: 2px solid rgb(73, 174, 187)
+
+.input
+    border-radius: 16px
+    background: rgb(255, 255, 255)
+    color: black
+    font-size: rem(18px)
+    line-height: rem(24px)
+
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    padding: 15px 16px 
+
+    border: 1px solid white
+
+    &::placeholder
+        color: rgb(130, 130, 130)
+        
+    &--error
+        border-color: rgb(213, 122, 102)
+        color: rgb(213, 122, 102)
+
+    &--block
+        display: block
+        width: 100%
+
+.audio-controls
+    &__play,
+    &__pause
+        display: grid
+        gap: 8px
+        grid-auto-flow: column
+        justify-content: start
+        align-items: center
+    &__progress
+        @include body-2
+        color: rgb(130, 130, 130)
+        .icon-svg
+            width: 20px
+            height: 17px
+
+.header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 64px
+    z-index: 1
+    padding: 8px 0
+
+    background-color: rgba(255, 255, 255, 0.8)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(16px)
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__logo
+
+    &__nav
+        font-size: rem(16px)
+        font-weight: 500
+        display: grid
+        gap: 32px
+        grid-auto-flow: column
+
+        a 
+            color: #000
+
+    &__user
+        display: flex
+        align-items: center
+        &__profile
+            width: 32px
+            height: 32px
+            margin-right: 16px
+            color: #1B9AAA
+            &:hover
+                color: rgb(73, 174, 187)
+
+.section
+    margin-top: 112px
+    &__wrapper
+        z-index: 1
+    &--main
+        margin-top: 0
+    &:last-child
+        margin-bottom: 112px
+
+.main
+    position: relative
+    color: #fff
+    font-size: rem(25px)
+    line-height: 1.25
+    padding-top: 160px
+    padding-bottom: 78px
+    .section__wrapper
+        max-width: 680px
+    &__bg-wrapper
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+    &__bg
+        grid-column: full-width !important
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        opacity: 0
+        transition: 1s opacity
+
+        background-image: var(--bg)
+
+        @media (max-width: 1279px)
+            background-image: var(--bg-tablet, var(--bg))
+        @media (max-width: 767px)
+            background-image: var(--bg-phone, var(--bg))
+
+        &.is-active
+            opacity: 1
+
+    &__title
+        margin-bottom: 32px
+
+    &__signup-form
+        margin-top: 64px
+        position: relative
+        &::after
+            display: block
+            content: ""
+            position: absolute
+            right: -80px
+            top: 50%    
+            transform: translate(100%, -50%)
+            width: 136px
+            height: 121px
+            background-image: url(/images/decor-arrow-1.png)
+            background-repeat: no-repeat
+            background-size: contain
+
+.form
+    &__row
+        margin-bottom: 8px
+        display: flex
+        align-items: center
+        &--last
+            margin-top: 16px
+    &__row-inline
+        margin-bottom: 8px
+        display: grid
+        gap: 8px
+        grid-auto-flow: column
+        align-items: center
+
+.signup-form
+    border-radius: var(--border-radius)
+    color: black
+    padding: 40px
+    p
+        @include subtitle-1
+    &__title
+        @include header-4
+        margin-bottom: 32px
+        max-width: 400px
+    &__warn
+        margin-left: 12px
+        font-size: rem(13px)
+        line-height: 1.25
+        color: rgb(130, 130, 130)
+
+
+.speak
+    &__title
+        text-align: center
+        @include header-2
+        margin-bottom: 24px
+    &__subtitle
+        @include subtitle-1
+        margin-bottom: 56px
+        text-align: center
+        color: #828282
+    &__cards
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+    &__card
+        border-radius: var(--border-radius)
+        padding: 64px 40px 40px
+        background-size: contain
+        background-position: right
+        background-repeat: no-repeat
+        height: 428px
+        &:nth-child(1)
+            background-image: url(/images/card-bg-1.jpeg)
+        &:nth-child(2)
+            background-image: url(/images/card-bg-2.jpeg)
+        &:nth-child(3)
+            grid-column: 1/3
+            display: flex
+            gap: 50px
+        &__title
+            @include header-4
+            margin-bottom: 24px
+            max-width: 50%
+        &__description
+            @include body-1
+            opacity: 0.6
+            max-width: 50%
+        &__left
+            flex: 0 0 25%
+            & > div
+                max-width: 100%
+        &__slider
+            display: flex
+            gap: 20px
+            overflow: hidden
+            img
+                width: 533px
+                height: 300px
+
+.test
+    .section__wrapper
+        display: flex
+        flex-direction: row
+        gap: 40px
+        align-items: center
+    &__image
+        width: 560px
+    &__right
+        display: flex
+        flex-direction: column
+        gap: 32px
+        align-items: flex-start
+    &__title
+        @include header-1
+    &__description
+        @include body-1
+
+.courses
+    display: grid
+    grid-auto-flow: row
+    gap: 40px
+    justify-content: center
+    
+.courses-item
+    display: grid
+    gap: 40px
+    align-items: center
+    grid-auto-flow: column
+    grid-template-columns: minmax(auto, 560px) minmax(auto, 560px)
+    &__title
+        margin-bottom: 32px
+    &__description
+        margin-bottom: 36px
+    &__image
+        width: 560px
+    &__right
+    &__link
+        font-size: rem(20px)
+        font-weight: 600
+        letter-spacing: 0.2px
+    &:nth-child(even)
+        .courses-item__right
+            order: -1
+
+.stories
+    &__title
+        margin-bottom: 56px
+    &__items
+    &__more
+        margin-top: 56px
+        display: flex
+        justify-content: center
+
+.stories-item
+    border-radius: var(--border-radius)
+    margin-bottom: 40px
+    width: 440px
+    padding-bottom: 32px
+    &__person
+        display: grid
+        grid-auto-flow: column
+        justify-content: start
+        gap: 16px
+        margin-bottom: 16px
+        padding: 24px 24px 0
+        &-image
+            width: 60px
+            height: 60px
+        &-name
+            padding-top: 8px
+            margin-bottom: 6px
+        &-job
+            color: rgb(130, 130, 130)
+    &__description
+        font-size: rem(18px)
+        padding: 0 24px
+
+.stories-item--video
+    .stories-item
+        &__person
+            padding-top: 18px
+            margin-bottom: 0
+
+.video
+    aspect-ratio: 55/31
+    display: block
+    background-color: black
+    background-image: var(--bg)
+    background-position: center center
+    background-size: contain
+    background-repeat: no-repeat
+    border-top-left-radius: var(--border-radius)
+    border-top-right-radius: var(--border-radius)
+    position: relative
+
+.video-play
+
+    @include absoluteCentered
+    
+    width: 56px
+    height: 56px
+    padding: 16px
+    border-radius: 100px
+    background: rgba(0, 0, 0, 0.8)
+    border: 0
+
+    &::before
+
+        @include absoluteCentered
+        transform-origin: top left
+
+        display: block
+        content: ""
+        width: 17px
+        height: 17px
+
+        transition: all 0.2s
+
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTcuMDAwMDAwIiBoZWlnaHQ9IjE3LjAwMDAwMCIgdmlld0JveD0iMCAwIDE3IDE3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KCTxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik0wIDhMMCA0LjQzQzAgMC4wMSAzLjEzIC0xLjggNi45NSAwLjQxTDEwLjA1IDIuMTlMMTMuMTQgMy45N0MxNi45NiA2LjE4IDE2Ljk2IDkuOCAxMy4xNCAxMi4wMUwxMC4wNSAxMy43OUw2Ljk1IDE1LjU3QzMuMTMgMTcuNzggMCAxNS45OCAwIDExLjU1TDAgOFoiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMS4wMDAwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIvPgo8L3N2Zz4K)
+        background-repeat: no-repeat
+        background-position: center center
+
+.video:hover
+    .video-play::before
+        scale: 1.2
+
+.teachers
+    .section__wrapper
+        border-top: 1px solid rgb(224, 224, 224)
+        padding-top: 56px
+    &__title
+        margin-bottom: 56px
+    &__items
+        display: grid
+        grid-auto-flow: column
+        gap: 40px
+        overflow: hidden
+    &__controls
+        margin-top: 46px
+        display: grid
+        grid-auto-flow: column
+        justify-content: center
+        justify-items: center
+        gap: 24px
+
+
+.teachers-item
+    width: 320px
+    &__image-border
+        background: linear-gradient(270.00deg, rgb(27, 154, 170) 0%,rgb(245, 241, 227) 100%)
+        padding: 6px
+        border-radius: 50%
+        display: inline-block
+    &__image
+        border-radius: 50%
+        box-shadow: 0 0 0 3px #fff
+    &__header,
+    &__body
+        margin-bottom: 20px
+    &__header
+        display: grid
+        justify-content: start
+        align-items: center
+        gap: 12px
+        grid-auto-flow: column
+    &__footer
+        padding-bottom: 10px
+    &__name
+        margin-bottom: 8px
+    &__experience
+        color: rgb(27, 154, 170)
+        margin-bottom: 8px
+    &__description
+        color: rgb(79, 79, 79)
+
+.faq
+    .section__wrapper
+        border-top: 1px solid rgb(224, 224, 224)
+        padding-top: 56px
+    &__title
+        margin-bottom: 56px
+    &__items
+        max-width: 1160px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+
+.faq-item
+    border-bottom: 1px solid rgb(224, 224, 224)
+    padding: 24px 0
+    &__header
+        display: grid
+        justify-content: start
+        align-items: center
+        grid-auto-flow: column
+        gap: 16px
+        &:hover
+            cursor: pointer
+            .faq-item__arrow
+                color: var(--text-link)
+                border-color: var(--text-link)
+    &__body
+        display: none
+        padding: 24px 56px
+
+    &.is-active
+        .faq-item
+            &__body
+                display: block
+
+.footer
+    padding: 40px 0
+    .footer__wrapper
+        display: flex
+        justify-content: space-between
+    &__left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__copyright
+        small
+            display: block
+            margin-top: 4px
+            color: rgb(79, 79, 79)
+            font-size: rem(13px)
+    &__navs
+        display: flex
+        gap: 80px
+    &__nav
+        display: flex
+        flex-direction: column
+        gap: 12px
+        a 
+            color: black
+            font-weight: 500
+            font-size: rem(16px)
+    &__socials
+        display: flex
+        gap: 8px
