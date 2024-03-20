@@ -26,12 +26,13 @@
             <div class="header__user">
                 <a href="#" class="header__user__profile"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-user-profile"></use></svg></a>
                 <button class="button header__user__signup" type="button">Запись на урок</button>
+                <button class="header__burger"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-burger"></use></svg></button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="content-grid section section--main main">
+        <section class="content-grid section section--main main" style="display: none;">
             <div class="full-width main__bg-wrapper">
                 <div class="main__bg is-active" style="background-image: url(./images/header-bg.jpg); --bg: './images/header-bg.jpg'"></div>
             </div>
@@ -51,6 +52,30 @@
                         <button type="button" class="button button--md">Отправить заявку</button>
                         <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-grid section section--main-inner main-inner bg-red">
+            <div class="breadcrumbs">
+                <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__link-fake">Занятия</span>
+            </div>
+            <div class="section__wrapper">
+                <div class="main-inner__left">
+                    <div class="text-header-1 main-inner__title">Индивидуальные занятия по английскому онлайн</div>
+                    <div class="main-inner__description">
+                        <ul>
+                            <li>Полноценные занятия длительностью 50 минут</li>
+                            <li>От классической практики речи до грамматики и бизнес-английского</li>
+                            <li>Для любого уровня языка</li>
+                            <li>Профессиональные преподаватели и дружественная атмосфера</li>
+                            <li>Вы сами выбираете удобное время и нужную тему</li>
+                        </ul>
+                    </div>
+                    <button class="button button--lg">Первый урок бесплатно</button>
+                </div>
+                <div class="main-inner__right">
+                    <div class="main-inner__image-container"><img src="./images/inner-1.jpeg" class="main-inner__image"></div>
                 </div>
             </div>
         </section>
@@ -92,6 +117,192 @@
                         </div>
                         <div class="start-item__description">Вышлем информацию для занятия заранее</div>
                         <button class="button button--md">Записаться на урок</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-grid section section--timetable timetable">
+            <div class="section__wrapper">
+                <div class="section__title process__title text-header-2 text-center">Расписание talks club</div>
+                <div class="timetable__dates select-group">
+                    <button class="select-group__item select-group__item--active">Вт, 21.02</button>
+                    <button class="select-group__item">Ср, 22.02</button>
+                    <button class="select-group__item">Чт, 23.02</button>
+                    <button class="select-group__item">Пт, 24.02</button>
+                    <button class="select-group__item">Сб, 25.02</button>
+                    <button class="select-group__item">Вс, 26.02</button>
+                    <button class="select-group__item">Пн, 27.02</button>
+                </div>
+                <div class="timetable__items">
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-vocabulary"></use></svg>Vocabulary</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Linking words for adding information</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-business"></use></svg>Business</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">How to give opinions</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Ниже среднего</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-express"></use></svg>Express</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">The Language of Lying</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-vocabulary"></use></svg>Vocabulary</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Linking words for adding information</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-speaking"></use></svg>Speaking</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Raising money for charity</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-games"></use></svg>Games</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Detective stories</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-listening"></use></svg>Listening</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Works of art</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg"><img src="./images/timetable-1.jpeg"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-grammar"></use></svg>Grammar</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Modals of possibility and certainty</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <section class="content-grid full-width section--prices prices bg-yellow">
+            <div class="section__wrapper">
+                <div class="section__title prices__title text-header-2 text-center">Подписка</div>
+                <div class="prices__items">
+                    <div class="prices-item">
+                        <div class="prices-item__title text-header-4">Пробная</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">0 ₽ </div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Записаться</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title text-header-4">1 месяц</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 990 ₽ </div>
+                                <div class="prices-item__price-muted">за месяц</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title text-header-4">3 месяца</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 540 ₽</div>
+                                <div class="prices-item__price-old"><s>2 990 ₽</s> <span class="label">-15%</span></div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title text-header-4">3 месяца</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 540 ₽</div>
+                                <div class="prices-item__price-old"><s>2 990 ₽</s> <span class="label">-15%</span></div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
                     </div>
                 </div>
             </div>
@@ -157,37 +368,40 @@
                 <div class="prices__items">
                     <div class="prices-item">
                         <div class="prices-item__title text-header-4">Стандартный</div>
-                        <div class="prices-item__price">от<span class="prices-item__price-number"> 890 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
-                        <div class="prices-item__benefits">
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-chat"></use></svg> Talks club: доступ на неделю</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 890 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
+                            </div>
                         </div>
                         <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
                     </div>
                     <div class="prices-item">
                         <div class="prices-item__title text-header-4">Продвинутый</div>
-                        <div class="prices-item__price">от<span class="prices-item__price-number"> 1 150 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
-                        <div class="prices-item__benefits">
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-chat"></use></svg> Talks club: доступ на неделю</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 150 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
+                            </div>
                         </div>
                         <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
                     </div>
                     <div class="prices-item">
                         <div class="prices-item__title prices-item__title--highlighted text-header-4">Премиум</div>
-                        <div class="prices-item__price">от<span class="prices-item__price-number"> 1 350 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
-                        <div class="prices-item__benefits">
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
-                            <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-chat"></use></svg> Talks club: доступ на неделю</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 350 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-chat"></use></svg> Talks club: доступ на неделю</div>
+                            </div>
                         </div>
                         <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
                     </div>
@@ -486,16 +700,16 @@
         <section class="content-grid section section--faq faq">
             <div class="section__wrapper">
                 <div class="faq__title text-header-2 text-center">Частые вопросы</div>
-                <div class="faq__items">
-                    <div class="faq-item is-active">
-                        <div class="faq-item__header">
+                <div class="faq__items js-accordion">
+                    <div class="faq-item accordion__item is-active">
+                        <div class="faq-item__header accordion__header">
                             <button class="button-arrow button-arrow--up button-arrow--filled faq-item__arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
                             <div class="text-header-5">Что нужно, чтобы начать обучение?</div>
                         </div>
                         <div class="faq-item__body">Это вводный урок, который позволит вам освоиться. Первая часть проходит индивидуально — можно посмотреть на платформу и пройти небольшой тест, определить свой уровень английского и подобрать программу. После к вам подключится методист, чтобы ответить на вопросы, рассказать о процессе обучения и помочь сформировать расписание.</div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-item__header">
+                    <div class="faq-item accordion__item">
+                        <div class="faq-item__header accordion__header">
                             <button class="button-arrow button-arrow--down faq-item__arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
                             <div class="text-header-5">Что нужно, чтобы начать обучение?</div>
                         </div>
@@ -611,6 +825,60 @@
             </g>
             <g id="icon-quote" fill="transparent">
                 <path d="M-6.10352e-05 12.6862C-6.10352e-05 8.74043 3.03404 6 6.97976 6C11.286 6 14.1892 9.4238 14.1892 13.8942C14.1892 22.277 7.50168 26.2561 4.1419 26.2561C3.19549 26.2561 2.51073 25.5713 2.51073 24.7237C2.51073 23.9402 2.8698 23.4182 4.10989 23.0605C6.26299 22.4732 8.77377 20.7766 9.98185 18.0696H9.72019C8.83918 19.1454 7.50168 19.3737 6.10014 19.3737C2.38129 19.3737 -6.10352e-05 16.437 -6.10352e-05 12.6862ZM17.8107 12.6862C17.8107 8.74043 20.8448 6 24.7905 6C29.0967 6 31.9999 9.4238 31.9999 13.8942C31.9999 22.277 25.3124 26.2561 21.9526 26.2561C21.0062 26.2561 20.3214 25.5713 20.3214 24.7237C20.3214 23.9402 20.6805 23.4182 21.9206 23.0605C24.0737 22.4732 26.5845 20.7766 27.7912 18.0696H27.5309C26.6499 19.1454 25.3124 19.3737 23.9095 19.3737C20.192 19.3737 17.8107 16.437 17.8107 12.6862Z" fill="currentColor"/>                 
+            </g>
+            <g id="icon-clock" fill="transparent">
+                <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.71 15.18L12.61 13.33C12.07 13.01 11.63 12.24 11.63 11.61V7.51001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-vocabulary" fill="transparent">
+                <path d="M3.5 18V7C3.5 3 4.5 2 8.5 2H15.5C19.5 2 20.5 3 20.5 7V17C20.5 17.14 20.5 17.28 20.49 17.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.35 15H20.5V18.5C20.5 20.43 18.93 22 17 22H7C5.07 22 3.5 20.43 3.5 18.5V17.85C3.5 16.28 4.78 15 6.35 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 7H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 10.5H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-business" fill="transparent">
+                <path d="M18.32 12C20.92 12 22 11 21.04 7.72C20.39 5.51 18.49 3.61 16.28 2.96C13 2 12 3.08 12 5.68V8.56C12 11 13 12 15 12H18.32Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.9999 14.7C19.0699 19.33 14.6299 22.69 9.57993 21.87C5.78993 21.26 2.73993 18.21 2.11993 14.42C1.30993 9.39001 4.64993 4.95001 9.25993 4.01001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-express" fill="transparent">
+                <path d="M18.4701 16.83L18.8601 19.99C18.9601 20.82 18.0701 21.4 17.3601 20.97L13.1701 18.48C12.7101 18.48 12.2601 18.45 11.8201 18.39C12.5601 17.52 13.0001 16.42 13.0001 15.23C13.0001 12.39 10.5401 10.09 7.50009 10.09C6.34009 10.09 5.2701 10.42 4.3801 11C4.3501 10.75 4.34009 10.5 4.34009 10.24C4.34009 5.68999 8.29009 2 13.1701 2C18.0501 2 22.0001 5.68999 22.0001 10.24C22.0001 12.94 20.6101 15.33 18.4701 16.83Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 15.23C13 16.42 12.56 17.52 11.82 18.39C10.83 19.59 9.26 20.36 7.5 20.36L4.89 21.91C4.45 22.18 3.89 21.81 3.95 21.3L4.2 19.33C2.86 18.4 2 16.91 2 15.23C2 13.47 2.94 11.92 4.38 11C5.27 10.42 6.34 10.09 7.5 10.09C10.54 10.09 13 12.39 13 15.23Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-speaking" fill="transparent">
+                <path d="M12 15.5C14.21 15.5 16 13.71 16 11.5V6C16 3.79 14.21 2 12 2C9.79 2 8 3.79 8 6V11.5C8 13.71 9.79 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.34998 9.64999V11.35C4.34998 15.57 7.77998 19 12 19C16.22 19 19.65 15.57 19.65 11.35V9.64999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.61 6.43C11.51 6.1 12.49 6.1 13.39 6.43" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.2 8.55001C11.73 8.41001 12.28 8.41001 12.81 8.55001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 19V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-games" fill="transparent">
+                <path d="M9.57002 12.46L6.52002 15.51" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.55005 12.49L9.60005 15.54" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.53 14H13.54" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.47 14H17.48" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.5 15.98V15.96" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.5 12.04V12.02" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 22H15C20 22 22 20 22 15V13C22 8 20 6 15 6H9C4 6 2 8 2 13V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.01 2L13 3.01C12.99 3.56 12.55 4 12 4H11.97C11.42 4 10.98 4.45 10.98 5C10.98 5.55 11.43 6 11.98 6H12.98" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-listening" fill="transparent">
+                <path d="M6.27991 22C8.00304 22 9.39991 20.6031 9.39991 18.88C9.39991 17.1569 8.00304 15.76 6.27991 15.76C4.55678 15.76 3.15991 17.1569 3.15991 18.88C3.15991 20.6031 4.55678 22 6.27991 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.8399 16.8V4.6C20.8399 2 19.2099 1.64 17.5599 2.09L11.3199 3.79C10.1799 4.1 9.3999 5 9.3999 6.3V8.47V9.93V18.87" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.7201 19.92C19.4432 19.92 20.8401 18.5231 20.8401 16.8C20.8401 15.0769 19.4432 13.68 17.7201 13.68C15.997 13.68 14.6001 15.0769 14.6001 16.8C14.6001 18.5231 15.997 19.92 17.7201 19.92Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.3999 9.51999L20.8399 6.39999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-timetable-grammar" fill="transparent">
+                <path d="M1.98999 5.93001V4.42001C1.98999 3.40001 2.81999 2.57001 3.83999 2.57001H16.76C17.78 2.57001 18.61 3.40001 18.61 4.42001V5.93001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.3 18.1V3.32001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.8999 18.1H12.4799" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.6799 10.34H20.6899C21.4199 10.34 22.0099 10.93 22.0099 11.66V12.46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.0801 21.43V10.87" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.9399 21.43H18.2199" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-burger" fill="transparent">
+                <path d="M3 7H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 17H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>                    
             </g>
         </defs>
     </svg>

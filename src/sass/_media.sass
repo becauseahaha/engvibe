@@ -1,0 +1,41 @@
+@media (max-width: 1279px)
+
+    :root 
+        --gap: 24px
+
+    .button
+        &--lg
+            padding: 16px 28px
+            font-size: rem(20px)
+            line-height: rem(24px)
+            letter-spacing: 0
+
+    .section
+        margin-top: 80px
+
+    .header
+        &__nav
+            display: none
+        &__user
+            &__profile
+                margin-right: 24px
+        &__burger
+            display: inline-block
+
+    .main-inner
+        margin-top: 0
+        .section__wrapper
+            flex-direction: column-reverse
+            gap: 60px
+            margin-top: 64px
+        &__image-container
+            max-width: 400px
+            margin: 0 auto
+        &__title
+            @include header-2
+            margin-bottom: 24px
+        &__description
+            @include subtitle-2
+            margin-bottom: 32px
+
+@media (max-width: 1023px)
