@@ -1,8 +1,9 @@
 const msnry = new Masonry('.stories__items', {
     itemSelector: '.stories-item',
-    gutter: 40,
+    columnWidth: '.stories-item--width',
+    gutter: '.stories-item--gap',
     horizontalOrder: true,
-    // columnWidth: 440
+    // percentPosition: true
 });
 
 const accordion = () => {
@@ -33,6 +34,60 @@ const accordion = () => {
     })
 }
 
+
+function hidePopup(id) {
+    let popup = document.getElementById(id)
+        ? document.getElementById(id)
+        : this.closest(".popup");
+
+    if (popup.dataset.processing && popup.dataset.processing == true) return;
+    popup.dataset.processing = true;
+
+    if (popup.classList.contains("is-shown")) {
+        popup.addEventListener(
+            "transitionend",
+            (e) => {
+                popup.style.display = "none";
+                popup.dataset.processing = false;
+            },
+            {
+                once: true,
+            }
+        );
+        popup.classList.remove("is-shown");
+        document.body.classList.remove("no-scroll");
+    }
+}
+
+function showPopup(id) {
+    let popup = document.getElementById(id);
+
+    if (popup.dataset.processing && popup.dataset.processing == true) return;
+    popup.dataset.processing = true;
+
+    if (popup.classList.contains("is-shown") == false) {
+
+        if (popup.dataset.file) {
+            var xhr= new XMLHttpRequest();
+            xhr.open('GET', popup.dataset.file, true);
+            xhr.onreadystatechange= function() {
+                if (this.readyState!==4) return;
+                if (this.status!==200) return;
+                popup.querySelector('.popup-window').innerHTML= this.responseText;
+            };
+            xhr.send();
+        }
+
+        popup.style.display = "flex";
+        setTimeout(function () {
+            popup.classList.add("is-shown");
+            document.body.classList.add("no-scroll");
+            popup.dataset.processing = false;
+        }, 1);
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     accordion();
@@ -40,4 +95,21 @@ document.addEventListener("DOMContentLoaded", () => {
     IMask(document.querySelector('.js-mask-phone'), {
           mask: '+{7} (000) 000-00-00'
     })
+
+    document.querySelectorAll(".popup").forEach((el) => {
+        el.addEventListener("click", function (e) {
+            if (e.target == el) {
+                hidePopup(e.target.id);
+            }
+        });
+    });
+    document.querySelectorAll(".js-popup-hide").forEach((el) => {
+        el.addEventListener("click", hidePopup.bind(el));
+    });
+    document.querySelectorAll(".js-popup-show").forEach((el) => {
+        el.addEventListener("click", (e) => {
+            e.preventDefault();
+            showPopup(el.dataset.target, el.dataset);
+        });
+    });
 })

@@ -1,7 +1,17 @@
 @media (max-width: 1279px)
 
     :root 
+        // --template-padding: 0px
+
+        --title-gap: 48px
         --gap: 24px
+        --section-gap: 80px
+
+    body
+        @include body-2
+
+    .label
+        @include body-2
 
     .button
         &--lg
@@ -11,7 +21,9 @@
             letter-spacing: 0
 
     .section
-        margin-top: 80px
+        overflow: hidden
+        &__title
+            @include header-3
 
     .header
         &__nav
@@ -35,7 +47,212 @@
             @include header-2
             margin-bottom: 24px
         &__description
-            @include subtitle-2
+            @include body-1
             margin-bottom: 32px
 
+    .icon-quote
+        width: 56px
+        height: 56px
+
+    .quote
+        .image-gradient-border
+            & > img
+                width: 116px
+                height: 116px
+        &__text
+            @include subtitle-2
+
+    .start
+        &__items
+            gap: 12px
+            @include slider
+
+    .start-item
+        scroll-snap-align: start
+        width: 320px
+        padding: 32px
+
+        &__step
+            width: 48px
+            height: 48px
+        &__description
+            font-size: rem(20px)
+
+        &:nth-child(1)::after,
+        &:nth-child(2)::after
+            right: -30px
+            width: 50px
+            height: 50px
+            transform: none
+
+    .select-group
+        &__item
+            font-size: rem(16px)
+
+    .timetable
+        &__items
+            grid-template-columns: 1fr 1fr
+
+    .prices
+        &:not(.prices--subscription)
+            .prices
+                &__items
+                    @include slider
+        &--subscription
+            .prices
+                &__items
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr
+    .prices-item
+        scroll-snap-align: start
+        padding: 32px
+        &__price
+            margin-bottom: 20px
+            &-number
+                @include header-5
+            &-old
+                font-size: rem(18px)
+            &-muted
+                font-size: rem(16px)
+        &__title
+            @include header-5
+            margin-bottom: 12px
+
+    .prices--subscription
+        .prices-item
+            &__title
+                margin-bottom: 16px
+
+    .process
+        &__items
+            @include slider
+
+    .process-item
+        width: 320px
+        scroll-snap-align: start
+        &__body
+            padding: 24px 32px 32px
+        &__title
+            @include header-5
+        &__bubble
+            @include header-6
+        &:nth-child(1),
+        &:nth-child(2)
+            .process-item__title::after
+                width: 50px
+                height: 50px
+                right: -70px
+
+    .tag
+        font-size: rem(18px)
+
+    .prices
+        &__items
+            gap: 12px
+        &__picker
+            margin-bottom: 32px
+
+    .speak
+        &__title
+        &__subtitle
+            @include subtitle-2
+        &__cards
+            grid-template-columns: 100%
+            // grid-template-rows: repeat(3, auto)
+        &__card
+            min-height: 428px
+            &:nth-child(3)
+                height: auto
+                flex-direction: column
+                grid-column: auto
+                gap: 40px
+            &__left
+                flex: unset
+
+    .test
+        .section__wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+        &__image
+            width: 100%
+        &__right
+            gap: 24px
+        &__title
+            @include header-3
+
+    .courses
+    .courses-item
+        grid-template-columns: 1fr 1fr
+        &__image
+            width: 100%
+            align-self: start
+        &__title
+            padding-top: 32px
+            @include header-4
+            margin-bottom: 24px
+        &__description
+            @include body-1
+            margin-bottom: 24px
+
+    // .stories-item
+    //     width: 48%
+    //     &--width
+    //         width: 48%
+    //     &--gap
+    //         width: 4%
+
+    .teachers
+        &__controls
+            display: none
+        &__items
+            @include slider
+
+    .teachers-item
+        scroll-snap-align: start
+        &__experience
+            font-size: rem(18px)
+
+    .footer
+        &__navs
+            flex-direction: column
+            gap: 12px
+
 @media (max-width: 1023px)
+
+    :root 
+        --title-gap: 32px
+        --gap: 16px
+        --section-gap: 56px
+
+    .header
+        &__user
+            &__signup
+                display: none
+            &__profile
+                margin-right: 0
+
+    .main
+        padding-top: 80px
+        padding-bottom: 30px
+        .section__wrapper
+            @include body-2
+            max-width: 100%
+        &__title
+            @include header-3
+            margin-bottom: 12px
+        &__signup-form
+            margin-top: 24px
+
+    .form
+        &__row-inline
+            display: flex
+            flex-direction: column
+            align-items: stretch
+
+    .signup-form
+        padding: 24px 16px
+        &__title
+            @include header-5
+            margin-bottom: 24px
+            max-width: 100%
