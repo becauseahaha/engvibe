@@ -218,7 +218,7 @@
             flex-direction: column
             gap: 12px
 
-@media (max-width: 1023px)
+@media (max-width: 767px)
 
     :root 
         --title-gap: 32px
@@ -232,17 +232,48 @@
             &__profile
                 margin-right: 0
 
+    .section
+        &__title
+            @include header-4
+
     .main
         padding-top: 80px
         padding-bottom: 30px
         .section__wrapper
             @include body-2
             max-width: 100%
+        &__bg
+            position: relative
+            &::after
+                display: block
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                backdrop-filter: blur(16px)
+                background: rgba(0, 0, 0, 0.4)
         &__title
             @include header-3
             margin-bottom: 12px
         &__signup-form
             margin-top: 24px
+
+    .main-inner
+        padding-bottom: 24px
+        .section__wrapper
+            margin-top: 24px
+            gap: 30px
+        &__image-container
+            max-width: 70%
+            border-radius: 16px
+        &__image
+            border-radius: 16px
+        &__left
+            padding-top: 0
+        &__title
+            @include header-4
 
     .form
         &__row-inline
@@ -256,3 +287,236 @@
             @include header-5
             margin-bottom: 24px
             max-width: 100%
+
+    .image-gradient-border
+        padding: 5px
+
+    .icon-quote
+        width: 40px
+        height: 40px
+        .icon-svg
+            width: 16px
+            height: 16px
+
+    .quote
+        .image-gradient-border
+            & > img
+                width: 64px
+                height: 64px
+        &__text
+            @include body-1
+
+    .start
+        &__items
+            gap: 8px
+
+    .start-item
+        padding: 16px
+        &__image-container
+            margin-bottom: 16px
+        &__description
+            @include body-2
+        .button--sm
+            display: block
+        .button--md
+            display: none
+
+    .select-group
+        @include slider
+        &__item
+            scroll-snap-align: start
+            white-space: nowrap
+            padding: 8px 12px
+
+    .timetable
+        &__items
+            grid-template-columns: 100%
+
+    .timetable-item
+        padding: 16px
+        &__wrapper
+            gap: 14px
+
+    .prices--subscription,
+    .prices
+        .prices
+            &__items
+                @include slider
+                display: flex
+                gap: 8px
+
+    .prices
+        &__picker
+            flex-wrap: wrap
+            justify-content: flex-start
+            margin-bottom: 24px
+            
+    .prices-item
+        flex: 1 0 80%
+        scroll-snap-align: start
+        padding: 24px 16px 16px
+        &__title
+            margin-bottom: 8px !important
+        &__benefit
+            font-size: rem(14px)
+
+    .process
+        &__items
+            display: flex
+            gap: 8px
+    .process-item
+        width: 80%
+        flex: 1 0 80%
+        &:nth-child(1),
+        &:nth-child(2)
+            .process-item__title::after
+                width: 40px
+                height: 40px
+                right: -40px
+                top: 40px
+        &__body
+            padding: 20px 16px 16px
+        &__bubble
+            margin-bottom: 20px
+
+    .tag
+        font-size: rem(14px)
+        padding: 8px 12px
+
+    .speak
+        &__title
+            @include header-5
+            margin-bottom: 12px
+        &__subtitle
+            @include body-2
+        &__cards
+        &__card
+            background-position: right -5px bottom
+            padding: 24px 16px 16px
+            height: 220px
+            min-height: unset
+            &__title
+                @include header-6
+                margin-bottom: 16px
+                max-width: 80%
+            &__description
+                font-size: rem(14px)
+                max-width: 60%
+            &__slider
+                img
+                    width: 90%
+                    height: auto
+            &:nth-child(3)
+                gap: 24px
+
+    .test
+        .section__wrapper
+            display: flex
+            flex-direction: column
+            gap: 24px
+        &__title
+            @include header-4
+        &__description
+            @include body-2
+
+    .courses
+        gap: 32px
+
+    .courses-item
+        grid-template-columns: 100%
+        grid-template-rows: auto auto
+        gap: 24px
+        &__title
+            padding-top: 0
+            @include header-5
+            margin-bottom: 16px
+        &__description
+            @include body-2
+            margin-bottom: 16px
+        &__link
+            font-size: rem(16px)
+        &:nth-child(even)
+            .courses-item__right
+                order: unset
+
+    .stories
+        &__items
+            display: flex
+            flex-direction: row
+            @include slider
+            gap: 8px
+        &__more
+
+    .stories-item
+        flex: 1 0 90%
+        scroll-snap-align: start
+        margin-bottom: 0
+        &__person
+            padding: 24px 16px 0
+            gap: 12px
+            margin-bottom: 12px
+            &-image
+                width: 40px
+                height: 40px
+            &-name
+                @include header-6
+            &-job
+                font-size: rem(14px)
+        &__description 
+            padding: 0 16px
+
+    .teachers
+        &__items
+            display: flex
+
+    .teachers-item
+        flex: 1 0 90%
+        &__image
+            width: 80px
+            height: 80px
+        &__name
+            @include header-6
+        &__description
+            font-size: rem(14px)
+
+    .faq
+
+    .faq-item
+        &__title
+            @include header-6
+        &__body
+            padding: 24px 52px
+            @include body-2
+
+
+    .footer
+        &__wrapper
+            display: grid
+            grid-template-columns: auto auto
+            grid-template-rows: auto auto
+        &__left
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+        &__navs
+            margin-top: 24px
+            grid-column: 1 / 3
+            grid-row: 2 / 3
+        &__right
+            grid-column: 2 / 3
+            grid-row: 1 / 2
+        &__copyright
+            display: none
+        &__copyright-mobile
+            display: block
+            margin-top: 24px
+
+    .popup--nav
+        &__singup
+            display: block
+            width: calc(100% - var(--template-padding)*2)
+            margin-top: 32px
+            margin-left: var(--template-padding)
+            margin-right: var(--template-padding)
+        .popup
+            &-window
+                width: 100%

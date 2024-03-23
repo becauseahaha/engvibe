@@ -1,10 +1,12 @@
-const msnry = new Masonry('.stories__items', {
-    itemSelector: '.stories-item',
-    columnWidth: '.stories-item--width',
-    gutter: '.stories-item--gap',
-    horizontalOrder: true,
-    // percentPosition: true
-});
+if (window.innerWidth > 768) {
+    const msnry = new Masonry('.stories__items', {
+        itemSelector: '.stories-item',
+        columnWidth: '.stories-item--width',
+        gutter: '.stories-item--gap',
+        horizontalOrder: true,
+        // percentPosition: true
+    });
+}
 
 const accordion = () => {
     // if (window.innerWidth > 767) return;
@@ -14,16 +16,16 @@ const accordion = () => {
             const self = el.closest('.accordion__item').classList.contains('is-active');
             const $btn = el.querySelector('.button-arrow');
 
-            // document.querySelectorAll('.accordion__item').forEach((el) => {
-            //     // console.log(el)
-            //     const $btn = el.querySelector('.button-arrow');
-            //     el.classList.remove('is-active');
-            //     $btn.classList.toggle('button-arrow--down')
-            //     $btn.classList.toggle('button-arrow--up')
-            //     $btn.classList.toggle('button-arrow--filled')
-            // })
+            document.querySelectorAll('.accordion__item').forEach((el) => {
+                // console.log(el)
+                const $btn = el.querySelector('.button-arrow');
+                el.classList.remove('is-active');
+                $btn.classList.toggle('button-arrow--down')
+                $btn.classList.toggle('button-arrow--up')
+                $btn.classList.toggle('button-arrow--filled')
+            })
             
-            // if (self) return;
+            if (self) return;
 
             $btn.classList.toggle('button-arrow--down')
             $btn.classList.toggle('button-arrow--up')
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     accordion();
 
     IMask(document.querySelector('.js-mask-phone'), {
-          mask: '+{7} (000) 000-00-00'
+            mask: '+{7} (000) 000-00-00'
     })
 
     document.querySelectorAll(".popup").forEach((el) => {

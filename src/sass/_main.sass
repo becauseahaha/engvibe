@@ -109,6 +109,7 @@ h1
 ul
     padding-left: 24px
 
+
 .social-link
 
     @include flexCentered
@@ -197,15 +198,15 @@ ul
         height: 24px
 
     &--link
-        margin-left: 14px
+        margin-left: 12px
         display: inline-flex
         width: 26.67px
         height: 26.67px
         border-color: currentColor
         color: currentColor
         .icon-svg
-            width: 14px
-            height: 14px
+            width: 12px
+            height: 12px
 
 
     &--left
@@ -598,7 +599,7 @@ ul
         border-radius: var(--border-radius)
         padding: 64px 40px 40px
         background-size: contain
-        background-position: right
+        background-position: right bottom
         background-repeat: no-repeat
         height: 428px
         &:nth-child(1)
@@ -651,7 +652,7 @@ ul
     display: grid
     grid-auto-flow: row
     gap: 40px
-    justify-content: center
+    justify-items: center
     
 .courses-item
     display: grid
@@ -671,6 +672,8 @@ ul
         font-size: rem(20px)
         font-weight: 600
         letter-spacing: 0.2px
+        display: flex
+        align-items: center
     &:nth-child(even)
         .courses-item__right
             order: -1
@@ -707,9 +710,11 @@ ul
             width: 60px
             height: 60px
         &-name
+            @include header-5
             padding-top: 8px
             margin-bottom: 6px
         &-job
+            @include body-2
             color: rgb(130, 130, 130)
     &__description
         font-size: rem(18px)
@@ -798,12 +803,14 @@ ul
     &__footer
         padding-bottom: 10px
     &__name
+        @include header-5
         margin-bottom: 8px
     &__experience
         font-size: rem(18px)
         color: rgb(27, 154, 170)
         margin-bottom: 8px
     &__description
+        @include body-2
         color: rgb(79, 79, 79)
 
 .image-gradient-border
@@ -830,6 +837,8 @@ ul
 .faq-item
     border-bottom: 1px solid rgb(224, 224, 224)
     padding: 24px 0
+    &__title
+        @include header-5
     &__header
         display: grid
         justify-content: start
@@ -856,19 +865,24 @@ ul
 
 .footer
     padding: 40px 0
-    .footer__wrapper
+    &__wrapper
         display: flex
         justify-content: space-between
     &__left
         display: flex
         flex-direction: column
         justify-content: space-between
-    &__copyright
+    &__copyright,
+    &__copyright-mobile
+        font-weight: 500
         small
             display: block
             margin-top: 4px
             color: rgb(79, 79, 79)
             font-size: rem(13px)
+            font-weight: 400
+    &__copyright-mobile
+        display: none
     &__navs
         display: flex
         gap: 80px
@@ -1063,6 +1077,9 @@ ul
     flex-direction: column
     align-items: flex-start
 
+    .button--sm
+        display: none
+
     &__body
         flex-grow: 1
 
@@ -1226,6 +1243,8 @@ ul
             height: 24px
 
 .popup--nav
+    &__singup
+        display: none
     .popup
         &-window
             width: 330px
