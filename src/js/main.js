@@ -1,10 +1,10 @@
-if (window.innerWidth > 768) {
+if (window.innerWidth >= 768) {
     const msnry = new Masonry('.stories__items', {
         itemSelector: '.stories-item',
         columnWidth: '.stories-item--width',
         gutter: '.stories-item--gap',
         horizontalOrder: true,
-        // percentPosition: true
+        percentPosition: true
     });
 }
 
@@ -63,6 +63,9 @@ function hidePopup(id) {
 
 function showPopup(id) {
     let popup = document.getElementById(id);
+
+    if (id != 'popup-nav') hidePopup('popup-nav');
+    if (id != 'popup-signup-options') hidePopup('popup-signup-options');
 
     if (popup.dataset.processing && popup.dataset.processing == true) return;
     popup.dataset.processing = true;

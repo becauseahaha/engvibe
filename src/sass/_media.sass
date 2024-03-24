@@ -195,12 +195,12 @@
             @include body-1
             margin-bottom: 24px
 
-    // .stories-item
-    //     width: 48%
-    //     &--width
-    //         width: 48%
-    //     &--gap
-    //         width: 4%
+    .stories-item
+        width: 48%
+        &--width
+            width: 48%
+        &--gap
+            width: 4%
 
     .teachers
         &__controls
@@ -217,6 +217,11 @@
         &__navs
             flex-direction: column
             gap: 12px
+
+    .popup
+        align-items: flex-start
+        &-window
+            margin-top: 72px
 
 @media (max-width: 767px)
 
@@ -420,7 +425,8 @@
             @include body-2
 
     .courses
-        gap: 32px
+        &__items
+            gap: 32px
 
     .courses-item
         grid-template-columns: 100%
@@ -510,6 +516,15 @@
             display: block
             margin-top: 24px
 
+    
+    .first-lesson
+        gap: 8px
+    .first-lesson-item
+        &__image
+            width: 116px
+        &__description
+            @include body-2
+
     .popup--nav
         &__singup
             display: block
@@ -520,3 +535,14 @@
         .popup
             &-window
                 width: 100%
+                border-radius: 0
+
+    .popup
+        align-items: center
+        &-window
+            margin-top: 0
+            &__title
+                @include header-5
+                padding-bottom: 24px
+            &__content
+                padding: 24px 16px 24px

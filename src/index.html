@@ -25,7 +25,7 @@
             </nav>
             <div class="header__user">
                 <a href="#" class="header__user__profile"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-user-profile"></use></svg></a>
-                <button class="button header__user__signup" type="button">Запись на урок</button>
+                <button class="button header__user__signup js-popup-show" data-target="popup-signup-options" type="button">Запись на урок</button>
                 <button class="header__burger js-popup-show" data-target="popup-nav"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-burger"></use></svg></button>
             </div>
         </div>
@@ -40,7 +40,10 @@
                 <h1 class="main__title">EngVibe – ваш уверенный английский</h1>
                 <p>Современное обучение, вдохновленное результатами</p>
                 <div class="main__signup-form signup-form form bg-blue">
-                    <div class="signup-form__title">Запишитесь на первый бесплатный урок</div>
+                    <div class="signup-form__title">
+                        <div>Запишитесь на первый  бесплатный урок</div>
+                        <div><button type="button" data-target="popup-first-lesson" class="icon-info js-popup-show"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-info"></use></svg></button></div>
+                    </div>
                     <div class="form__row">
                         <input type="text" class="input input--block" placeholder="Ваше имя*">
                     </div>
@@ -72,7 +75,7 @@
                             <li>Вы сами выбираете удобное время и нужную тему</li>
                         </ul>
                     </div>
-                    <button class="button button--lg">Первый урок бесплатно</button>
+                    <button class="button button--lg js-popup-show" data-target="popup-signup-form">Первый урок бесплатно</button>
                 </div>
                 <div class="main-inner__right">
                     <div class="main-inner__image-container"><img src="./images/inner-1.jpeg" class="main-inner__image"></div>
@@ -452,36 +455,38 @@
             </div>
         </section>
         <section class="content-grid section section--courses courses">
-            <div class="courses-item">
-                <img src="./images/courses-1.jpeg" srcset="./images/courses-1@2x.jpeg 2x" class="courses-item__image">
-                <div class="courses-item__right">
-                    <div class="courses-item__title">Занятия 1:1</div>
-                    <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+            <div class="courses__items">
+                <div class="courses-item">
+                    <img src="./images/courses-1.jpeg" srcset="./images/courses-1@2x.jpeg 2x" class="courses-item__image">
+                    <div class="courses-item__right">
+                        <div class="courses-item__title">Занятия 1:1</div>
+                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
+                        <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="courses-item">
-                <img src="./images/courses-2.jpeg" srcset="./images/courses-2@2x.jpeg 2x" class="courses-item__image">
-                <div class="courses-item__right">
-                    <div class="courses-item__title">Курсы «Life  английский»</div>
-                    <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                <div class="courses-item">
+                    <img src="./images/courses-2.jpeg" srcset="./images/courses-2@2x.jpeg 2x" class="courses-item__image">
+                    <div class="courses-item__right">
+                        <div class="courses-item__title">Курсы «Life  английский»</div>
+                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
+                        <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="courses-item">
-                <img src="./images/courses-3.jpeg" srcset="./images/courses-3@2x.jpeg 2x" class="courses-item__image">
-                <div class="courses-item__right">
-                    <div class="courses-item__title">Exam+</div>
-                    <div class="courses-item__description">Мы знаем, что нужно для успешной сдачи экзаменов, и направляем вас на каждом этапе подготовки.</div>
-                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                <div class="courses-item">
+                    <img src="./images/courses-3.jpeg" srcset="./images/courses-3@2x.jpeg 2x" class="courses-item__image">
+                    <div class="courses-item__right">
+                        <div class="courses-item__title">Exam+</div>
+                        <div class="courses-item__description">Мы знаем, что нужно для успешной сдачи экзаменов, и направляем вас на каждом этапе подготовки.</div>
+                        <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                    </div>
                 </div>
-            </div>
-            <div class="courses-item">
-                <img src="./images/courses-4.jpeg" srcset="./images/courses-4@2x.jpeg 2x" class="courses-item__image">
-                <div class="courses-item__right">
-                    <div class="courses-item__title">Talks club</div>
-                    <div class="courses-item__description">Улучшайте свой английский в кругу единомышленников. Обсудим актуальные темы, разберемся в грамматике или погрузимся в мир бизнес английского и не только - выбор за вами! </div>
-                    <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                <div class="courses-item">
+                    <img src="./images/courses-4.jpeg" srcset="./images/courses-4@2x.jpeg 2x" class="courses-item__image">
+                    <div class="courses-item__right">
+                        <div class="courses-item__title">Talks club</div>
+                        <div class="courses-item__description">Улучшайте свой английский в кругу единомышленников. Обсудим актуальные темы, разберемся в грамматике или погрузимся в мир бизнес английского и не только - выбор за вами! </div>
+                        <a href="#" class="courses-item__link">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -772,6 +777,100 @@
         </div>
     </footer>
 
+    <div class="popup" id="popup-signup-form">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Запишитесь на первый бесплатный урок</div>
+                <div class="signup-form signup-form--popup form">
+                    <div class="form__row">
+                        <input type="text" class="input input--block" placeholder="Ваше имя*">
+                    </div>
+                    <div class="form__row">
+                        <input type="text" class="input input--block" placeholder="Email*">
+                    </div>
+                    <div class="form__row">
+                        <input type="text" class="input input--block js-mask-phone" value="" placeholder="+7 (___) ___-__-__*">
+                    </div>
+                    <div class="form__row" style="display: none;">
+                        <div class="warning">Заполните выделенное поле</div>
+                    </div>
+                    <div class="form__row-inline form__row--last">
+                        <button type="button" class="button button--md button--nowrap">Отправить заявку</button>
+                        <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-signup-form-second">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Запись на повторный урок</div>
+                <div class="signup-form signup-form--popup form">
+                    <div class="form__row">
+                        <input type="text" class="input input--block js-mask-phone" value="" placeholder="+7 (___) ___-__-__*">
+                    </div>
+                    <div class="form__row" style="display: none;">
+                        <div class="warning">Заполните выделенное поле</div>
+                    </div>
+                    <div class="form__row-inline form__row--last">
+                        <button type="button" class="button button--md button--nowrap">Отправить заявку</button>
+                        <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-first-lesson">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Что входит в первый урок?</div>
+                <div class="first-lesson">
+                    <div class="first-lesson-item">
+                        <img src="./images/start-1.jpeg" class="first-lesson-item__image">
+                        <div class="first-lesson-item__description">Знакомство с преподавателем</div>
+                    </div>
+                    <div class="first-lesson-item">
+                        <img src="./images/start-1.jpeg" class="first-lesson-item__image">
+                        <div class="first-lesson-item__description">Определение уровня знаний</div>
+                    </div>
+                    <div class="first-lesson-item">
+                        <img src="./images/start-1.jpeg" class="first-lesson-item__image">
+                        <div class="first-lesson-item__description">Персонализация программы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-signup-options">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Записаться на урок</div>
+                <div class="mb-8">
+                    <button type="button" class="button button--md button--block js-popup-show" data-target="popup-signup-form">Первый бесплатный урок</button>
+                </div>
+                <div>
+                    <button type="button" class="button button--md button--block js-popup-show" data-target="popup-signup-form-second">Повторная запись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="popup popup--nav" id="popup-nav">
         <div class="popup-window">
             <div class="popup__close">
@@ -786,7 +885,7 @@
                 <a href="#">Отзывы</a>
                 <a href="#">Блог</a>
             </nav>
-            <button class="popup--nav__singup button button--md">Запись на урок</button>
+            <button class="popup--nav__singup button button--md js-popup-show" data-target="popup-signup-form">Запись на урок</button>
         </div>
     </div>
 
@@ -919,8 +1018,13 @@
                 <path d="M16.2426 16.2426L7.75735 7.75732" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>                    
             </g>
             <g id="icon-arrow-right-2" fill="transparent">
-                <path d="M1.33337 5H9.33337" stroke="#1B9AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6.66663 9L10.6666 5L6.66663 1" stroke="#1B9AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+                <path d="M1.33337 5H9.33337" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.66663 9L10.6666 5L6.66663 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>                    
+            </g>
+            <g id="icon-info" fill="transparent">
+                <path d="M16 29.3334C23.3333 29.3334 29.3333 23.3334 29.3333 16.0001C29.3333 8.66675 23.3333 2.66675 16 2.66675C8.66663 2.66675 2.66663 8.66675 2.66663 16.0001C2.66663 23.3334 8.66663 29.3334 16 29.3334Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 14.6667V21.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.9927 10.6667H16.0047" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>                    
             </g>
         </defs>
     </svg>
