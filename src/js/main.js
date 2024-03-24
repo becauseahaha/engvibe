@@ -9,23 +9,23 @@ if (window.innerWidth >= 768) {
 }
 
 const accordion = () => {
-    // if (window.innerWidth > 767) return;
     document.querySelectorAll('.js-accordion .accordion__header').forEach((el) => {
         el.addEventListener('click', function() {
 
             const self = el.closest('.accordion__item').classList.contains('is-active');
             const $btn = el.querySelector('.button-arrow');
+            
+            if (self) return;
 
             document.querySelectorAll('.accordion__item').forEach((el) => {
                 // console.log(el)
                 const $btn = el.querySelector('.button-arrow');
                 el.classList.remove('is-active');
-                $btn.classList.toggle('button-arrow--down')
-                $btn.classList.toggle('button-arrow--up')
-                $btn.classList.toggle('button-arrow--filled')
+                $btn.classList.add('button-arrow--down')
+                $btn.classList.remove('button-arrow--up')
+                $btn.classList.remove('button-arrow--filled')
             })
             
-            if (self) return;
 
             $btn.classList.toggle('button-arrow--down')
             $btn.classList.toggle('button-arrow--up')
