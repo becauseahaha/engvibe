@@ -311,11 +311,8 @@ ul
     letter-spacing: 0.2px
     font-weight: 600
 
-    &:hover
+    &:hover:enabled
         background: rgb(73, 174, 187)
-
-    &:disabled
-        opacity: 0.4
 
     &--block
         width: 100%
@@ -335,14 +332,61 @@ ul
 
     &--outlined
         box-shadow: none
-        background: white
+        background: transparent !important
         color: rgb(27, 154, 170)
         border: 2px solid rgb(27, 154, 170)
 
         &:hover
-            background: white
             color: rgb(73, 174, 187)
             border: 2px solid rgb(73, 174, 187)
+
+    &:disabled
+        opacity: 0.4
+        cursor: default
+
+.radio
+    display: block
+    position: relative
+    padding-left: 32px
+    user-select: none
+    cursor: pointer
+    input
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+        &:checked ~ .radio__fake
+            border-color: rgb(27, 154, 170)
+        &:checked ~ .radio__fake::after
+            display: block !important
+    &__fake
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 24px
+        width: 24px
+        background-color: #fff
+        border: 2px solid rgb(209, 235, 238)
+        border-radius: 50%
+        &::after
+            content: ""
+            position: absolute
+            display: none
+            left: 50%
+            top: 50%
+            width: 12px
+            height: 12px
+            transform: translate(-50%, -50%)
+            background: rgb(27, 154, 170)
+            border-radius: 50%
+    
+    &:hover
+        .radio
+            &__fake
+                border-color: rgb(27, 154, 170)
+
 
 .input
     border-radius: 16px
@@ -1079,6 +1123,26 @@ ul
             height: 24px
             color: var(--text-link)
 
+.prices-item--compact
+    padding: 24px
+    .prices-item
+        &__title
+            @include header-5
+            display: flex
+            justify-content: space-between
+            margin-bottom: 12px
+        &__price
+            display: flex
+            align-items: baseline
+            gap: 8px
+            margin-bottom: 20px
+            font-size: rem(16px)
+            font-weight: 400
+            &-number
+                @include header-5
+            &-old
+                font-size: rem(16px)
+
 .icon-info
     display: inline-block
     vertical-align: bottom
@@ -1315,6 +1379,12 @@ ul
             width: 24px
             height: 24px
 
+.popup--test-result
+    .popup
+        &-window
+            &__title
+                padding-bottom: 20px
+
 .popup--nav
     justify-content: flex-end
     align-items: stretch !important
@@ -1338,3 +1408,66 @@ ul
                 font-size: 18px
                 font-weight: 500
                 border-bottom: 1px solid rgba(27, 154, 170, 0.2)
+
+.survey
+    color: #000
+    &__forms-wrapper
+        display: flex
+        overflow: auto
+        scroll-behavior: smooth
+        position: relative
+    &__form
+        flex: 1 0 100%
+        border-radius: var(--border-radius)
+        background-color: #fff
+        padding: 32px 24px
+        display: none
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        transition: opacity 0.3s
+        z-index: 0
+        &.is-active
+            z-index: 1
+            // opacity: 1
+            display: block
+            position: relative
+    &__question
+        @include body-1
+        margin-bottom: 24px
+        font-weight: 500
+        display: flex
+    &__question-step
+        flex: 0 0 32px
+    &__option
+        margin-bottom: 12px
+        @include body-2
+        &:last-child
+            margin-bottom: 0
+    &__progress
+        margin-top: 32px
+        display: flex
+        flex-direction: row
+        &-step
+            flex: 1 0 0
+            height: 4px
+            background: rgb(27, 154, 170)
+            opacity: 0.2
+            transition: opacity 0.3s
+            &.is-active
+                opacity: 1
+            &:first-child
+                border-top-left-radius: 100px
+                border-bottom-left-radius: 100px
+            &:last-child
+                border-top-right-radius: 100px
+                border-bottom-right-radius: 100px
+    &__controls
+        margin-top: 32px
+        display: flex
+        justify-content: center
+        gap: 8px
+        .button
+            flex-grow: 1
+            max-width: 50%

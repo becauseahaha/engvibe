@@ -105,8 +105,8 @@
                             </div>
                             <div class="start-item__description">Определите ваш уровень английского</div>
                         </div>
-                        <button class="button button--md">Пройти тест</button>
-                        <button class="button button--sm">Пройти тест</button>
+                        <button class="button button--md js-popup-show" data-target="popup-test">Пройти тест</button>
+                        <button class="button button--sm js-popup-show" data-target="popup-test">Пройти тест</button>
                     </div>
                     <div class="start-item">
                         <div class="start-item__body">
@@ -848,6 +848,102 @@
                     <div class="first-lesson-item">
                         <img src="./images/start-1.jpeg" class="first-lesson-item__image">
                         <div class="first-lesson-item__description">Персонализация программы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup--test-result" id="popup-survey-result-1">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Результат теста</div>
+                <div class="mb-8 text-body-2">Разнообразный и богатый опыт говорит нам, что внедрение современных методик в значительной степени обусловливает важность анализа существующих паттернов поведения.</div>
+                <br>
+                <div class="prices-item prices-item--compact">
+                    <div class="prices-item__title">Продвинутый <span class="label">-15%</span></div>
+                    <div class="prices-item__body">
+                        <div class="prices-item__price">
+                            от
+                            <div class="prices-item__price-number">2 540 ₽</div>
+                            <div class="prices-item__price-old"><s>2 990 ₽</s></div>
+                            <div class="prices-item__price-muted">за урок</div>
+                        </div>
+                    </div>
+                    <button type="button" class="prices-item__button button button--md button--nowrap js-popup-show" data-target="popup-signup-form">Записаться на бесплатный урок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup--mobile-transparent" id="popup-test">
+        <div class="popup-window bg-blue">
+            <div class="popup__close">
+                <button class="js-popup-hide"><span class="btn_arrow"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-close"></use></svg></span></button>
+            </div>
+            <div class="popup-window__content">
+                <div class="popup-window__title">Что английский для вас?</div>
+                <div class="survey" id="survey">
+                    <div class="survey__forms-wrapper js-survey-steps">
+                        <div class="survey__form is-active js-survey-step" data-step="1" style="opacity: 1;">
+                            <div class="survey__question"><div class="survey__question-step">1.</div>Выберите ваши цели</div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Путешествия и туризм
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Сдать экзамен
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Карьерный рост
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Личное развитие
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Переезд в другую страну
+                                </label>
+                            </div>
+                        </div>
+                        <div class="survey__form js-survey-step" data-step="2">
+                            <div class="survey__question"><div class="survey__question-step">2.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Средний ( мне под силу любой small-talk, но более сложные темы даются с трудом)
+                                </label>
+                            </div>
+                            <div class="survey__option">
+                                <label class="radio">
+                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Продвинутый (читаю научные статьи, могу обсудить любую тему)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="survey__progress js-survey-progress"></div>
+                    <div class="survey__controls">
+                        <button type="button" class="button button--md button--outlined js-survey-prev" style="display: none;">Шаг 1</button>
+                        <button type="button" class="button button--md js-survey-next" disabled>Шаг 2</button>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,114 @@ if (window.innerWidth >= 768) {
     });
 }
 
+function resetSurvey() {
+    // const $box = document.getElementById('survey');
+    // if (!$box) return;
+
+    // $box.dataset.step = 1;
+
+    // $box.querySelectorAll('input').forEach(element => {
+    //     element.checked = false
+    // });
+}
+
+const survey = () => {
+
+    let step = 1;
+    let steps_total;
+    let i = 1;
+    let is_last = false;
+
+    const $box = document.getElementById('survey');
+    if (!$box) return;
+    
+    const $steps = $box.querySelector('.js-survey-steps');
+    const $progress = $box.querySelector('.js-survey-progress')
+
+    steps_total = $steps.querySelectorAll('.js-survey-step').length;
+
+    const $prev = $box.querySelector('.js-survey-prev');
+    const $next = $box.querySelector('.js-survey-next');
+
+    function showResult() {
+        hidePopup('popup-test')
+        showPopup('popup-survey-result-1')
+    }
+
+    function showStep(step) {
+
+        const $form = $box.querySelector('.js-survey-step[data-step="' +step+ '"]');
+        if (!$form) return
+
+        is_last = (step == steps_total);
+
+        $steps.querySelectorAll('.js-survey-step').forEach(element => {
+            element.classList.remove('is-active')
+            element.style.opacity = 0;
+        });
+        $form.classList.add('is-active');
+        setTimeout(() => {
+            $form.style.opacity = 1;
+        }, 0);
+
+        i = 1;
+        $progress.querySelectorAll('.survey__progress-step').forEach(element => {
+            if (i <= step) {
+                element.classList.add('is-active')
+            } else {
+                element.classList.remove('is-active')
+            }
+            i++;
+        });
+    }
+
+    i = 1;
+    $steps.querySelectorAll('.js-survey-step').forEach(element => {
+
+        element.querySelectorAll('input').forEach(radio => {
+            radio.addEventListener('change', function() {
+                $next.disabled = false;
+            })
+        })
+
+        const div = document.createElement("div");
+        div.classList.add('survey__progress-step')
+        if (i == 1) {
+            div.classList.add('is-active')
+        }
+        $progress.appendChild(div)
+
+        i++;
+    })
+
+    $prev.addEventListener('click', function(e) {
+        step--;
+        showStep(step)
+        $next.disabled = false;
+        if (step == 1) {
+            $prev.style.display = 'none';
+        }
+        $prev.innerHTML = 'Шаг ' + (step-1);
+        $next.innerHTML = 'Шаг ' + (step+1);
+    })
+    $next.addEventListener('click', function(e) {
+        step++;
+        if (!is_last) {
+            showStep(step)
+        } else {
+            showResult()
+        }
+        $prev.style.display = 'block';
+        $next.disabled = true;
+        $prev.innerHTML = 'Шаг ' + (step-1);
+        if (!is_last) {
+            $next.innerHTML = 'Шаг ' + (step+1);
+        } else {
+            $next.innerHTML = 'Отправить';
+        }
+    })
+}
+
 const accordion = () => {
     document.querySelectorAll('.js-accordion .accordion__header').forEach((el) => {
         el.addEventListener('click', function() {
@@ -66,6 +174,11 @@ function showPopup(id) {
 
     if (id != 'popup-nav') hidePopup('popup-nav');
     if (id != 'popup-signup-options') hidePopup('popup-signup-options');
+    if (id != 'popup-survey-result-1') hidePopup('popup-survey-result-1');
+
+    if (id == 'popup-test') {
+        resetSurvey();
+    }
 
     if (popup.dataset.processing && popup.dataset.processing == true) return;
     popup.dataset.processing = true;
@@ -96,6 +209,7 @@ function showPopup(id) {
 document.addEventListener("DOMContentLoaded", () => {
 
     accordion();
+    survey();
 
     IMask(document.querySelector('.js-mask-phone'), {
             mask: '+{7} (000) 000-00-00'
