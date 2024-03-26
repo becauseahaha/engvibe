@@ -126,7 +126,6 @@ const accordion = () => {
             if (self) return;
 
             document.querySelectorAll('.accordion__item').forEach((el) => {
-                // console.log(el)
                 const $btn = el.querySelector('.button-arrow');
                 el.classList.remove('is-active');
                 $btn.classList.add('button-arrow--down')
@@ -169,12 +168,14 @@ function hidePopup(id) {
     }
 }
 
-function showPopup(id) {
+function showPopup(id, dataset) {
     let popup = document.getElementById(id);
 
     if (id != 'popup-nav') hidePopup('popup-nav');
     if (id != 'popup-signup-options') hidePopup('popup-signup-options');
     if (id != 'popup-survey-result-1') hidePopup('popup-survey-result-1');
+    if (id != 'popup-lesson') hidePopup('popup-lesson');
+    if (id != 'popup-teacher') hidePopup('popup-teacher');
 
     if (id == 'popup-test') {
         resetSurvey();
@@ -185,9 +186,9 @@ function showPopup(id) {
 
     if (popup.classList.contains("is-shown") == false) {
 
-        if (popup.dataset.file) {
+        if (dataset.file) {
             var xhr= new XMLHttpRequest();
-            xhr.open('GET', popup.dataset.file, true);
+            xhr.open('GET', dataset.file, true);
             xhr.onreadystatechange= function() {
                 if (this.readyState!==4) return;
                 if (this.status!==200) return;
@@ -222,13 +223,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-    document.querySelectorAll(".js-popup-hide").forEach((el) => {
-        el.addEventListener("click", hidePopup.bind(el));
-    });
-    document.querySelectorAll(".js-popup-show").forEach((el) => {
-        el.addEventListener("click", (e) => {
+    document.body.addEventListener('click', function(e) {
+
+        const $close = e.target.closest(".js-popup-hide");
+        if ($close) {
             e.preventDefault();
-            showPopup(el.dataset.target, el.dataset);
-        });
-    });
+            hidePopup.call($close);
+        }
+        
+        const $show = e.target.closest(".js-popup-show");
+        if ($show) {
+            e.preventDefault();
+            showPopup($show.dataset.target, $show.dataset);
+        }
+    })
+    // document.querySelectorAll(".js-popup-hide").forEach((el) => {
+    //     el.addEventListener("click", hidePopup.bind(el));
+    // });
+    // document.querySelectorAll(".js-popup-show").forEach((el) => {
+    //     el.addEventListener("click", (e) => {
+    //         e.preventDefault();
+    //         showPopup(el.dataset.target, el.dataset);
+    //     });
+    // });
 })
