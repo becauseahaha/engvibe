@@ -33,113 +33,268 @@
     </header>
 
     <main>
-        <section class="content-grid section section--main main">
-            <div class="full-width main__bg-wrapper">
-                <div class="main__bg is-active" style="background-image: url(./images/header-bg.jpg); --bg: './images/header-bg.jpg'"></div>
+
+        <section class="content-grid section section--main-inner main-inner bg-yellow">
+            <div class="breadcrumbs">
+                <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__link-fake">Занятия</span>
             </div>
             <div class="section__wrapper">
-                <h1 class="main__title">EngVibe – ваш уверенный английский</h1>
-                <p>Современное обучение, вдохновленное результатами</p>
-                <form method="post" action="mailer.php" class="main__signup-form signup-form form js-mail-form bg-blue">
-                    <div class="signup-form__title">
-                        <div>Запишитесь на первый  бесплатный урок</div>
-                        <div><button type="button" data-target="popup-first-lesson" class="icon-info js-popup-show"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-info"></use></svg></button></div>
+                <div class="main-inner__left">
+                    <div class="main-inner__title">Talks club.Больше чем разговорный клуб</div>
+                    <div class="main-inner__description">
+                        <ul>
+                            <li>Полноценные занятия длительностью 50 минут</li>
+                            <li>От классической практики речи до грамматики и бизнес-английского</li>
+                            <li>Для любого уровня языка</li>
+                            <li>Профессиональные преподаватели и дружественная атмосфера</li>
+                            <li>Вы сами выбираете удобное время и нужную тему</li>
+                        </ul>
                     </div>
-                    <div class="form__row">
-                        <input type="text" class="input input--block" name="name" placeholder="Ваше имя*">
-                    </div>
-                    <div class="form__row-inline">
-                        <input type="text" class="input" name="email" placeholder="Email*">
-                        <input type="text" class="input js-mask-phone" name="phone" placeholder="+7 (___) ___-__-__*">
-                    </div>
-                    <div class="form__row js-warning" style="display: none;">
-                        <div class="warning">Заполните выделенное поле</div>
-                    </div>
-                    <div class="form__row-inline form__row--last">
-                        <button class="button button--md js-submit">Отправить заявку</button>
-                        <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
-                    </div>
-                </form>
+                    <button class="button button--lg js-popup-show" data-target="popup-signup-form">Записаться</button>
+                </div>
+                <div class="main-inner__right">
+                    <div class="main-inner__image-container"><img src="./images/inner-2.jpeg" class="main-inner__image"></div>
+                </div>
             </div>
         </section>
 
-        <section class="content-grid section section--speak speak">
-            <div class="section__title text-center speak__title">Заговорить на первом занятии? — Легко!</div>
-            <div class="speak__subtitle">Секрет успеха наших учеников в главных принципах школы</div>
-            <div class="speak__cards">
-                <div class="speak__card bg-yellow">
-                    <div class="speak__card__title">Преподаватели профессионалы</div>
-                    <div class="speak__card__description">Владеют английским языком на высоком уровне и знают как привести вас к цели, поддержат и вдохновят</div>
+        <section class="content-grid section section--quote quote">
+            <div class="section__wrapper">
+                <div class="image-gradient-border"><img src="./images/teacher-1.jpeg"></div>
+                <div>
+                    <div class="icon-quote"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-quote"></use></svg></div>
+                    <div class="quote__text">Добро пожаловать в talks club ‒ место, где мы совершенствуем английский и наслаждаемся общением в комфортной обстановке</div>
                 </div>
-                <div class="speak__card bg-red">
-                    <div class="speak__card__title">Комфортная среда и современный  подход</div>
-                    <div class="speak__card__description">Дружественная атмосфера и реальная разговорная практика помогут преодалеть тот самый языковой барьер</div>
-                </div>
-                <div class="speak__card bg-blue">
-                    <div class="speak__card__left">
-                        <div class="speak__card__title">Удобно. Просто. Доступно.</div>
-                        <div class="speak__card__description">Все необходимое для занятий в одном месте - в любое время, из любой точки мира, на любом устройстве</div>
+            </div>
+        </section>
+
+        <section class="content-grid full-width section section--start start bg-blue">
+            <div class="section__wrapper">
+                <div class="section__title start__title text-center">С чего начать?</div>
+                <div class="start__items">
+                    <div class="start-item">
+                        <div class="start-item__body">
+                            <div class="start-item__image-container">
+                                <img src="./images/start-1.jpeg" srcset="./images/start-1.jpeg 2x" class="start-item__image">
+                                <div class="start-item__step">1</div>
+                            </div>
+                            <div class="start-item__description">Определите ваш уровень английского</div>
+                        </div>
+                        <button class="button button--md js-popup-show" data-target="popup-test">Пройти тест</button>
+                        <button class="button button--sm js-popup-show" data-target="popup-test">Пройти тест</button>
                     </div>
-                    <div class="speak__card__right">
-                        <div class="speak__card__slider swipe js-swiper-speak">
-                            <div class="swiper-wrapper">    
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
+                    <div class="start-item">
+                        <div class="start-item__body">
+                            <div class="start-item__image-container">
+                                <img src="./images/start-1.jpeg" srcset="./images/start-1.jpeg 2x" class="start-item__image">
+                                <div class="start-item__step">2</div>
+                            </div>
+                            <div class="start-item__description">Выберите понравившийся урок из расписания</div>
+                        </div>
+                        <button class="button button--md">Выбрать урок</button>
+                        <button class="button button--sm">Пройти тест</button>
+                    </div>
+                    <div class="start-item">
+                        <div class="start-item__body">
+                            <div class="start-item__image-container">
+                                <img src="./images/start-1.jpeg" srcset="./images/start-1.jpeg 2x" class="start-item__image">
+                                <div class="start-item__step">3</div>
+                            </div>
+                            <div class="start-item__description">Вышлем информацию для занятия заранее</div>
+                        </div>
+                        <button class="button button--md">Записаться на урок</button>
+                        <button class="button button--sm">Записаться на урок</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-grid section section--timetable timetable">
+            <div class="section__wrapper">
+                <div class="section__title process__title text-center">Расписание talks club</div>
+                <div class="timetable__dates select-group">
+                    <button class="select-group__item select-group__item--active">Вт, 21.02</button>
+                    <button class="select-group__item">Ср, 22.02</button>
+                    <button class="select-group__item">Чт, 23.02</button>
+                    <button class="select-group__item">Пт, 24.02</button>
+                    <button class="select-group__item">Сб, 25.02</button>
+                    <button class="select-group__item">Вс, 26.02</button>
+                    <button class="select-group__item">Пн, 27.02</button>
+                </div>
+                <div class="timetable__items">
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-vocabulary"></use></svg>Vocabulary</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Linking words for adding information</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
                             </div>
                         </div>
-                        <div class="speak__card__slider-pagination js-swiper-speak-pagination"></div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-business"></use></svg>Business</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">How to give opinions</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Ниже среднего</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-express"></use></svg>Express</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">The Language of Lying</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-vocabulary"></use></svg>Vocabulary</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Linking words for adding information</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-speaking"></use></svg>Speaking</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Raising money for charity</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-games"></use></svg>Games</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Detective stories</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-listening"></use></svg>Listening</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Works of art</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-grammar"></use></svg>Grammar</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Modals of possibility and certainty</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="content-grid section section--test test">
+        </section>  
+        <section class="content-grid full-width section--prices prices prices--subscription bg-yellow">
             <div class="section__wrapper">
-                <img src="./images/test.jpeg" class="test__image">
-                <div class="test__right">
-                    <div class="test__title">Какие занятия подойдут именно вам?</div>
-                    <div class="test__description">Пойдите короткий тест и мы поможем вам определиться с выбором курса и преподавателя, а также подарим бесплатный первый урок!</div>
-                    <button class="button button--md js-popup-show" data-target="popup-test" type="button">Начать тест</button>
+                <div class="section__title prices__title text-center">Подписка</div>
+                <div class="prices__items">
+                    <div class="prices-item">
+                        <div class="prices-item__title">Пробная</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">0 ₽ </div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Записаться</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title">1 месяц</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 990 ₽ </div>
+                                <div class="prices-item__price-muted">за месяц</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title">3 месяца</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 540 ₽</div>
+                                <div class="prices-item__price-old"><s>2 990 ₽</s> <span class="label">-15%</span></div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title">3 месяца</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price prices-item__price--columns">
+                                <div class="prices-item__price-number">2 540 ₽</div>
+                                <div class="prices-item__price-old"><s>2 990 ₽</s> <span class="label">-15%</span></div>
+                                <div class="prices-item__price-muted">за урок</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Купить</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="content-grid section section--courses courses">
-            <div class="courses__items">
-                <div class="courses-item">
-                    <img src="./images/courses-1.jpeg" srcset="./images/courses-1@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Занятия 1:1</div>
-                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-2.jpeg" srcset="./images/courses-2@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Курсы «Life  английский»</div>
-                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-2.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-3.jpeg" srcset="./images/courses-3@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Exam+</div>
-                        <div class="courses-item__description">Мы знаем, что нужно для успешной сдачи экзаменов, и направляем вас на каждом этапе подготовки.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-4.jpeg" srcset="./images/courses-4@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Talks club</div>
-                        <div class="courses-item__description">Улучшайте свой английский в кругу единомышленников. Обсудим актуальные темы, разберемся в грамматике или погрузимся в мир бизнес английского и не только - выбор за вами! </div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="content-grid section section--stories stories">
             <div class="section__wrapper">
                 <div class="section__title stories__title text-center">Истории Успеха наших учеников</div>
@@ -228,149 +383,7 @@
                 </div>
             </div>
         </section>
-        <section class="content-grid section section--teachers teachers">
-            <div class="section__wrapper">
-                <div class="section__title teachers__title text-center">Наши преподаватели</div>
-                <div class="swiper swiper-teachers">
-                    <div class="swiper-wrapper teachers__items">
-                        <div class="teachers-item swiper-slide">
-                            <div class="teachers-item__header">
-                                <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
-                                <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play" style="display: none;">
-                                            <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
-                                        </div>
-                                        <div class="audio-controls__pause">
-                                            <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="teachers-item__body">
-                                <div class="teachers-item__name">Полина Козлова</div>
-                                <div class="teachers-item__experience">Опыт: 5 лет</div>
-                                <div class="teachers-item__description">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
-                            </div>
-                            <div class="teachers-item__footer">
-                                <button class="button button-sm js-popup-show" data-target="popup-teacher" data-file="popup-teacher-1.html">Подробнее</button>
-                            </div>
-                        </div>
-                        <div class="teachers-item swiper-slide">
-                            <div class="teachers-item__header">
-                                <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
-                                <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play" style="display: none;">
-                                            <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
-                                        </div>
-                                        <div class="audio-controls__pause">
-                                            <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="teachers-item__body">
-                                <div class="teachers-item__name">Полина Козлова</div>
-                                <div class="teachers-item__experience">Опыт: 5 лет</div>
-                                <div class="teachers-item__description">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
-                            </div>
-                            <div class="teachers-item__footer">
-                                <button class="button button-sm js-popup-show" data-target="popup-teacher" data-file="popup-teacher-1.html">Подробнее</button>
-                            </div>
-                        </div>
-                        <div class="teachers-item swiper-slide">
-                            <div class="teachers-item__header">
-                                <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
-                                <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
-                                            <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
-                                        </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="teachers-item__body">
-                                <div class="teachers-item__name">Полина Козлова</div>
-                                <div class="teachers-item__experience">Опыт: 5 лет</div>
-                                <div class="teachers-item__description">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
-                            </div>
-                            <div class="teachers-item__footer">
-                                <button class="button button-sm js-popup-show" data-target="popup-teacher" data-file="popup-teacher-1.html">Подробнее</button>
-                            </div>
-                        </div>
-                        <div class="teachers-item swiper-slide">
-                            <div class="teachers-item__header">
-                                <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
-                                <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
-                                            <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
-                                        </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="teachers-item__body">
-                                <div class="teachers-item__name">Полина Козлова</div>
-                                <div class="teachers-item__experience">Опыт: 5 лет</div>
-                                <div class="teachers-item__description">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
-                            </div>
-                            <div class="teachers-item__footer">
-                                <button class="button button-sm js-popup-show" data-target="popup-teacher" data-file="popup-teacher-1.html">Подробнее</button>
-                            </div>
-                        </div>
-                        <div class="teachers-item swiper-slide">
-                            <div class="teachers-item__header">
-                                <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
-                                <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
-                                            <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
-                                        </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="teachers-item__body">
-                                <div class="teachers-item__name">Полина Козлова</div>
-                                <div class="teachers-item__experience">Опыт: 5 лет</div>
-                                <div class="teachers-item__description">Дипломированный преподаватель английского языка с опытом подготовки к экзаменам на 7.0+ баллов</div>
-                            </div>
-                            <div class="teachers-item__footer">
-                                <button class="button button-sm js-popup-show" data-target="popup-teacher" data-file="popup-teacher-1.html">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="teachers__controls">
-                    <button class="button-arrow button-arrow--left swiper-teachers-prev"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
-                    <button class="button-arrow swiper-teachers-next"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-arrow-right"></use></svg></button>
-                </div>
-            </div>
-        </section>
+        
         <section class="content-grid section section--faq faq">
             <div class="section__wrapper">
                 <div class="section__title faq__title text-center">Частые вопросы</div>

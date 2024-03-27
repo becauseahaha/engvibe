@@ -33,113 +33,135 @@
     </header>
 
     <main>
-        <section class="content-grid section section--main main">
-            <div class="full-width main__bg-wrapper">
-                <div class="main__bg is-active" style="background-image: url(./images/header-bg.jpg); --bg: './images/header-bg.jpg'"></div>
+
+        <section class="content-grid section section--main-inner main-inner bg-red">
+            <div class="breadcrumbs">
+                <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__link-fake">Занятия</span>
             </div>
             <div class="section__wrapper">
-                <h1 class="main__title">EngVibe – ваш уверенный английский</h1>
-                <p>Современное обучение, вдохновленное результатами</p>
-                <form method="post" action="mailer.php" class="main__signup-form signup-form form js-mail-form bg-blue">
-                    <div class="signup-form__title">
-                        <div>Запишитесь на первый  бесплатный урок</div>
-                        <div><button type="button" data-target="popup-first-lesson" class="icon-info js-popup-show"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-info"></use></svg></button></div>
+                <div class="main-inner__left">
+                    <div class="main-inner__title">Индивидуальные занятия по английскому онлайн</div>
+                    <div class="main-inner__description">
+                        Созданы для того, чтобы максимально адаптироваться к вашим потребностям и обеспечить эффективное обучение
                     </div>
-                    <div class="form__row">
-                        <input type="text" class="input input--block" name="name" placeholder="Ваше имя*">
-                    </div>
-                    <div class="form__row-inline">
-                        <input type="text" class="input" name="email" placeholder="Email*">
-                        <input type="text" class="input js-mask-phone" name="phone" placeholder="+7 (___) ___-__-__*">
-                    </div>
-                    <div class="form__row js-warning" style="display: none;">
-                        <div class="warning">Заполните выделенное поле</div>
-                    </div>
-                    <div class="form__row-inline form__row--last">
-                        <button class="button button--md js-submit">Отправить заявку</button>
-                        <span class="signup-form__warn">Отправляя заявку, я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
-                    </div>
-                </form>
+                    <button class="button button--lg js-popup-show" data-target="popup-signup-form">Первый урок бесплатно</button>
+                </div>
+                <div class="main-inner__right">
+                    <div class="main-inner__image-container"><img src="./images/inner-1.jpeg" class="main-inner__image"></div>
+                </div>
             </div>
         </section>
 
-        <section class="content-grid section section--speak speak">
-            <div class="section__title text-center speak__title">Заговорить на первом занятии? — Легко!</div>
-            <div class="speak__subtitle">Секрет успеха наших учеников в главных принципах школы</div>
-            <div class="speak__cards">
-                <div class="speak__card bg-yellow">
-                    <div class="speak__card__title">Преподаватели профессионалы</div>
-                    <div class="speak__card__description">Владеют английским языком на высоком уровне и знают как привести вас к цели, поддержат и вдохновят</div>
-                </div>
-                <div class="speak__card bg-red">
-                    <div class="speak__card__title">Комфортная среда и современный  подход</div>
-                    <div class="speak__card__description">Дружественная атмосфера и реальная разговорная практика помогут преодалеть тот самый языковой барьер</div>
-                </div>
-                <div class="speak__card bg-blue">
-                    <div class="speak__card__left">
-                        <div class="speak__card__title">Удобно. Просто. Доступно.</div>
-                        <div class="speak__card__description">Все необходимое для занятий в одном месте - в любое время, из любой точки мира, на любом устройстве</div>
+        <section class="content-grid section section--process process">
+            <div class="section__title process__title text-center">Как проходят занятия?</div>
+            <div class="process__items">
+                <div class="process-item bg-blue">
+                    <div class="video" style="--bg: url('../images/video-2.jpeg')">
+                        <span class="video-play"></span>
+                        <video width="100%" height="100%" controls  preload="none">
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="speak__card__right">
-                        <div class="speak__card__slider swipe js-swiper-speak">
-                            <div class="swiper-wrapper">    
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
-                                <img src="./images/slider-1.png" srcset="./images/slider-1@2x.png 2x" class="swiper-slide">
+                    <div class="process-item__body">
+                        <div class="process-item__title">Шаг 1</div>
+                        <div class="process-item__bubble">До занятия</div>
+                        <ul class="process-item__list">
+                            <li>Предоставим выбор квалифицированных преподавателей по вашим предпочтениям</li>
+                            <li>Выберете удобное для себя время </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-item bg-red">
+                    <div class="video" style="--bg: url('../images/video-1.jpeg')">
+                        <span class="video-play"></span>
+                        <video width="100%" height="100%" controls  preload="none">
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="process-item__body">
+                        <div class="process-item__title">Шаг 2</div>
+                        <div class="process-item__bubble">Let’s get started!</div>
+                        <ul class="process-item__list">
+                            <li>Созваниваетесь с преподавателем на платформе</li>
+                            <li>Получаете доступ к разнообразным учебным ресурсам</li>
+                            <li>Занимаетесь с удовольствием из любой точки мира</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-item bg-yellow">
+                    <div class="video" style="--bg: url('../images/video-2.jpeg')">
+                        <span class="video-play"></span>
+                        <video width="100%" height="100%" controls  preload="none">
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="process-item__body">
+                        <div class="process-item__title">Шаг 3</div>
+                        <div class="process-item__bubble">После занятия</div>
+                        <ul class="process-item__list">
+                            <li>Закрепляете изученное на интерактивной платформе</li>
+                            <li>Все новые слова у вас под рукой</li>
+                            <li>Отслеживайте свой прогресс</li>
+                            <li>Наслаждаетесь результатом!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-grid full-width section section--prices prices bg-yellow">
+            <div class="section__wrapper">
+                <div class="section__title prices__title text-center">Стоимость</div>
+                <div class="prices__picker">
+                    <button class="prices__picker-btn tag tag--active">5 уроков</button>
+                    <button class="prices__picker-btn tag">10 уроков</button>
+                    <button class="prices__picker-btn tag">20 уроков</button>
+                    <button class="prices__picker-btn tag">40 уроков</button>
+                    <button class="prices__picker-btn tag" disabled>80 уроков</button>
+                </div>
+                <div class="prices__items">
+                    <div class="prices-item">
+                        <div class="prices-item__title">Стандартный</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 890 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
                             </div>
                         </div>
-                        <div class="speak__card__slider-pagination js-swiper-speak-pagination"></div>
+                        <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title">Продвинутый</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 150 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
+                    </div>
+                    <div class="prices-item">
+                        <div class="prices-item__title prices-item__title--highlighted">Премиум</div>
+                        <div class="prices-item__body">
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 350 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__benefits">
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-book"></use></svg> Курсы: Standart +</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-refresh"></use></svg> Перенос/отмена занятий: до 2-х раз в месяц</div>
+                                <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-chat"></use></svg> Talks club: доступ на неделю</div>
+                            </div>
+                        </div>
+                        <button type="button" class="prices-item__button button button--md">Записаться <nobr>на бесплатный урок</nobr></button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="content-grid section section--test test">
-            <div class="section__wrapper">
-                <img src="./images/test.jpeg" class="test__image">
-                <div class="test__right">
-                    <div class="test__title">Какие занятия подойдут именно вам?</div>
-                    <div class="test__description">Пойдите короткий тест и мы поможем вам определиться с выбором курса и преподавателя, а также подарим бесплатный первый урок!</div>
-                    <button class="button button--md js-popup-show" data-target="popup-test" type="button">Начать тест</button>
-                </div>
-            </div>
-        </section>
-        <section class="content-grid section section--courses courses">
-            <div class="courses__items">
-                <div class="courses-item">
-                    <img src="./images/courses-1.jpeg" srcset="./images/courses-1@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Занятия 1:1</div>
-                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-2.jpeg" srcset="./images/courses-2@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Курсы «Life  английский»</div>
-                        <div class="courses-item__description">Созданы для того, чтобы максимально адаптировать уроки к вашим потребностям и обеспечить эффективное обучение.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-2.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-3.jpeg" srcset="./images/courses-3@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Exam+</div>
-                        <div class="courses-item__description">Мы знаем, что нужно для успешной сдачи экзаменов, и направляем вас на каждом этапе подготовки.</div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-                <div class="courses-item">
-                    <img src="./images/courses-4.jpeg" srcset="./images/courses-4@2x.jpeg 2x" class="courses-item__image">
-                    <div class="courses-item__right">
-                        <div class="courses-item__title">Talks club</div>
-                        <div class="courses-item__description">Улучшайте свой английский в кругу единомышленников. Обсудим актуальные темы, разберемся в грамматике или погрузимся в мир бизнес английского и не только - выбор за вами! </div>
-                        <a href="#" class="courses-item__link js-popup-show" data-target="popup-lesson" data-file="popup-lesson-1.html">Подробнее<button class="button-arrow button-arrow--link"><svg class="icon-svg" viewBox="0 0 12 10"><use href="#icon-arrow-right-2"></use></svg></button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="content-grid section section--stories stories">
             <div class="section__wrapper">
                 <div class="section__title stories__title text-center">Истории Успеха наших учеников</div>
