@@ -10,17 +10,17 @@
             <div class="popup--teacher__controls">
                 <button type="button" class="prices-item__button button button--nowrap js-popup-show" data-target="popup-signup-options">Записаться на урок</button>
             </div>
-            <div class="popup--lesson__audio audio-controls">
-                <div class="audio-controls__play" style="display: none;">
+            <div class="popup--lesson__audio audio js-audio" data-detailed-duration>
+                <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                <div class="audio__play is-active">
                     <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                    <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                    <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                 </div>
-                <div class="audio-controls__pause">
+                <div class="audio__pause">
                     <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                    <div class="audio-controls__progress">00:40</div>
+                    <div class="audio__progress audio__duration"></div>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>

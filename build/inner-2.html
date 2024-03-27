@@ -68,7 +68,7 @@
             </div>
         </section>
 
-        <section class="content-grid full-width section section--start start bg-blue">
+        <section class="content-grid full-width section section--nopadding section--start start bg-blue">
             <div class="section__wrapper">
                 <div class="section__title start__title text-center">С чего начать?</div>
                 <div class="start__items">
@@ -92,7 +92,7 @@
                             <div class="start-item__description">Выберите понравившийся урок из расписания</div>
                         </div>
                         <button class="button button--md">Выбрать урок</button>
-                        <button class="button button--sm">Пройти тест</button>
+                        <button class="button button--sm">Выбрать урок</button>
                     </div>
                     <div class="start-item">
                         <div class="start-item__body">
@@ -110,18 +110,18 @@
         </section>
 
         <section class="content-grid section section--timetable timetable">
-            <div class="section__wrapper">
+            <div class="section__wrapper js-tabs">
                 <div class="section__title process__title text-center">Расписание talks club</div>
                 <div class="timetable__dates select-group">
-                    <button class="select-group__item select-group__item--active">Вт, 21.02</button>
-                    <button class="select-group__item">Ср, 22.02</button>
-                    <button class="select-group__item">Чт, 23.02</button>
-                    <button class="select-group__item">Пт, 24.02</button>
-                    <button class="select-group__item">Сб, 25.02</button>
-                    <button class="select-group__item">Вс, 26.02</button>
-                    <button class="select-group__item">Пн, 27.02</button>
+                    <button class="select-group__item is-active js-tabs-button" data-id="timetable-1">Вт, 21.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Ср, 22.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Чт, 23.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Пт, 24.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Сб, 25.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Вс, 26.02</button>
+                    <button class="select-group__item js-tabs-button" data-id="timetable-2">Пн, 27.02</button>
                 </div>
-                <div class="timetable__items">
+                <div class="timetable__items js-tabs-content is-active" id="timetable-1">
                     <div class="timetable-item">
                         <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
                         <div class="timetable-item__wrapper">
@@ -243,9 +243,41 @@
                         </div>
                     </div>
                 </div>
+                <div class="timetable__items js-tabs-content" id="timetable-2">
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-vocabulary"></use></svg>Vocabulary</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">Linking words for adding information</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Высокий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable-item">
+                        <div class="timetable-item__bg" style="background-image: url(./images/timetable-1.jpeg);"></div>
+                        <div class="timetable-item__wrapper">
+                            <div class="timetable-item__header">
+                                <div class="timetable-item__type"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-timetable-business"></use></svg>Business</div>
+                                <div class="timetable-item__time"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-clock"></use></svg>08:00</div>
+                            </div>
+                            <div class="timetable-item__body text-header-6">How to give opinions</div>
+                            <div class="timetable-item__footer">
+                                <div class="timetable-item__teacher">
+                                    <img src="./images/teacher-1.jpeg" class="timetable-item__teacher-picture"> Полина<br>Козлова</div>
+                                <div class="timetable-item__difficulty">Ниже среднего</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>  
-        <section class="content-grid full-width section--prices prices prices--subscription bg-yellow">
+        <section class="content-grid full-width section--prices section--nopadding prices prices--subscription bg-yellow">
             <div class="section__wrapper">
                 <div class="section__title prices__title text-center">Подписка</div>
                 <div class="prices__items">
@@ -295,7 +327,7 @@
             </div>
         </section>
 
-        <section class="content-grid section section--stories stories">
+        <section class="content-grid section section--nopadding section--stories stories">
             <div class="section__wrapper">
                 <div class="section__title stories__title text-center">Истории Успеха наших учеников</div>
                 <div class="stories__items">
@@ -544,7 +576,7 @@
                             <div class="prices-item__price-muted">за урок</div>
                         </div>
                     </div>
-                    <button type="button" class="prices-item__button button button--md button--nowrap js-popup-show" data-target="popup-signup-form">Записаться на бесплатный урок</button>
+                    <button type="button" class="prices-item__button button button--md js-popup-show" data-target="popup-signup-form">Записаться на бесплатный урок</button>
                 </div>
             </div>
         </div>
