@@ -923,60 +923,62 @@
             <div class="popup-window__content">
                 <div class="popup-window__title">Что английский для вас?</div>
                 <div class="survey" id="survey">
-                    <div class="survey__forms-wrapper js-survey-steps">
-                        <div class="survey__form is-active js-survey-step" data-step="1" style="opacity: 1;">
-                            <div class="survey__question"><div class="survey__question-step">1.</div>Выберите ваши цели</div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Путешествия и туризм
-                                </label>
+                    <div>
+                        <div class="survey__forms-wrapper js-survey-steps">
+                            <div class="survey__form is-active js-survey-step" data-step="1" style="opacity: 1;">
+                                <div class="survey__question"><div class="survey__question-step">1.</div>Выберите ваши цели</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Путешествия и туризм
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Сдать экзамен
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Карьерный рост
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Личное развитие
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Переезд в другую страну
+                                    </label>
+                                </div>
                             </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Сдать экзамен
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Карьерный рост
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Личное развитие
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_1"><span class="radio__fake"></span> Переезд в другую страну
-                                </label>
+                            <div class="survey__form js-survey-step" data-step="2">
+                                <div class="survey__question"><div class="survey__question-step">2.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_2"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_2"><span class="radio__fake"></span> Средний ( мне под силу любой small-talk, но более сложные темы даются с трудом)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_2"><span class="radio__fake"></span> Продвинутый (читаю научные статьи, могу обсудить любую тему)
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        <div class="survey__form js-survey-step" data-step="2">
-                            <div class="survey__question"><div class="survey__question-step">2.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Средний ( мне под силу любой small-talk, но более сложные темы даются с трудом)
-                                </label>
-                            </div>
-                            <div class="survey__option">
-                                <label class="radio">
-                                    <input type="radio" name="survey_2"><span class="radio__fake"></span> Продвинутый (читаю научные статьи, могу обсудить любую тему)
-                                </label>
-                            </div>
-                        </div>
+                        <div class="survey__progress js-survey-progress"></div>
                     </div>
-                    <div class="survey__progress js-survey-progress"></div>
                     <div class="survey__controls">
                         <button type="button" class="button button--md button--outlined js-survey-prev" style="display: none;">Шаг 1</button>
                         <button type="button" class="button button--md js-survey-next" disabled>Шаг 2</button>

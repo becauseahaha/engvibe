@@ -266,7 +266,7 @@ function showPopup(id, dataset) {
     popup.dataset.processing = true;
 
     if (popup.classList.contains("is-shown") == false) {
-        if (dataset.file) {
+        if (dataset && dataset.file !== undefined) {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", dataset.file, true);
             xhr.onreadystatechange = function () {

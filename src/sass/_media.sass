@@ -562,9 +562,20 @@
     .popup--mobile-transparent
         .popup
             &-window
+                box-shadow: none
                 background: transparent
                 color: #fff
                 height: 100svh
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                &__content
+                    padding-left: 0
+                    padding-right: 0
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    flex-grow: 1
 
     .popup--lesson
         align-items: flex-end
@@ -599,3 +610,14 @@
                     &-content
                         padding: 20px 16px 40px
                         max-height: unset
+
+    .survey
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex-grow: 1
+        .button--outlined
+            color: #fff
+            border-color: #fff
+        &__form
+            padding: 24px 16px
