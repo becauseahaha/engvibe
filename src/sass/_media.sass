@@ -207,8 +207,11 @@
             display: none
         &__items
             @include slider
+            gap: var(--gap)
+            overflow: auto
 
     .teachers-item
+        width: 320px !important
         scroll-snap-align: start
         &__experience
             font-size: rem(18px)
@@ -413,6 +416,14 @@
                     height: auto
             &:nth-child(3)
                 gap: 24px
+            
+            &__slider
+                &-pagination
+                    position: relative
+                    z-index: 2
+                    padding-right: 16px
+                &-page
+                    flex: 1 0 0
 
     .test
         .section__wrapper
@@ -476,7 +487,8 @@
             display: flex
 
     .teachers-item
-        flex: 1 0 90%
+        width: 90% !important
+        flex: 1 0 90% !important
         &__image
             width: 80px
             height: 80px
