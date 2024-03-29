@@ -26,7 +26,7 @@
             </nav>
             <div class="header__user">
                 <a href="#" class="header__user__profile"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-user-profile"></use></svg></a>
-                <button class="button header__user__signup js-popup-show" data-target="popup-signup-options" type="button">Запись на урок</button>
+                <button class="button header__user__signup js-popup-show" data-target="popup-signup-form" data-subject="Контактная форма: Шапка" type="button">Запись на урок</button>
                 <button class="header__burger js-popup-show" data-target="popup-nav"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-burger"></use></svg></button>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="section__wrapper">
                 <h1 class="main__title">EngVibe – ваш уверенный английский</h1>
                 <p>Современное обучение, вдохновленное результатами</p>
-                <form method="post" action="mailer.php" class="main__signup-form signup-form form js-mail-form bg-blue">
+                <form method="post" action="https://killboard-1.com/etc/mail/mailer.php" class="main__signup-form signup-form form js-mail-form bg-blue">
                     <div class="signup-form__title">
                         <div>Запишитесь на первый  бесплатный урок</div>
                         <div><button type="button" data-target="popup-first-lesson" class="icon-info js-popup-show"><svg class="icon-svg" viewBox="0 0 32 32"><use href="#icon-info"></use></svg></button></div>
@@ -442,7 +442,8 @@
             </div>
             <div class="popup-window__content">
                 <div class="popup-window__title">Запишитесь на первый бесплатный урок</div>
-                <form class="signup-form signup-form--popup form js-mail-form" method="post" action="mailer.php">
+                <form class="signup-form signup-form--popup form js-mail-form" method="post" action="https://killboard-1.com/etc/mail/mailer.php">
+                    <input type="hidden" name="subject" value="Запишитесь на первый бесплатный урок">
                     <div class="form__row">
                         <input type="text" class="input input--block" name="name" placeholder="Ваше имя*">
                     </div>
@@ -471,7 +472,8 @@
             </div>
             <div class="popup-window__content">
                 <div class="popup-window__title">Запись на повторный урок</div>
-                <form class="signup-form signup-form--popup form js-mail-form" action="mailer.php" method="post">
+                <form class="signup-form signup-form--popup form js-mail-form" action="https://killboard-1.com/etc/mail/mailer.php" method="post">
+                    <input type="hidden" name="subject" value="Запись на повторный урок">
                     <div class="form__row">
                         <input type="text" class="input input--block js-mask-phone" name="phone" placeholder="+7 (___) ___-__-__*">
                     </div>
@@ -531,7 +533,7 @@
                             <div class="prices-item__price-muted">за урок</div>
                         </div>
                     </div>
-                    <button type="button" class="prices-item__button button button--md js-popup-show" data-target="popup-signup-form">Записаться на бесплатный урок</button>
+                    <button type="button" class="prices-item__button button button--md js-popup-show" data-target="popup-signup-form" data-subject="Контактная форма: Результат теста 1">Записаться на бесплатный урок</button>
                 </div>
             </div>
         </div>
@@ -556,7 +558,7 @@
                             <div class="prices-item__price-muted">за урок</div>
                         </div>
                     </div>
-                    <button type="button" class="prices-item__button button button--md js-popup-show" data-target="popup-signup-form">Записаться на бесплатный урок</button>
+                    <button type="button" class="prices-item__button button button--md js-popup-show" data-target="popup-signup-form" data-subject="Контактная форма: Результат теста 2">Записаться на бесплатный урок</button>
                 </div>
             </div>
         </div>
@@ -584,27 +586,27 @@
                                 <div class="survey__question"><div class="survey__question-step">1.</div>Выберите ваши цели</div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Путешествия и туризм
+                                        <input type="radio" name="survey_1" value="1"><span class="radio__fake"></span> Путешествия и туризм
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Сдать экзамен
+                                        <input type="radio" name="survey_1" value="2"><span class="radio__fake"></span> Сдать экзамен
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Карьерный рост
+                                        <input type="radio" name="survey_1" value="3"><span class="radio__fake"></span> Карьерный рост
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Личное развитие
+                                        <input type="radio" name="survey_1" value="4"><span class="radio__fake"></span> Личное развитие
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_1"><span class="radio__fake"></span> Переезд в другую страну
+                                        <input type="radio" name="survey_1" value="5"><span class="radio__fake"></span> Переезд в другую страну
                                     </label>
                                 </div>
                             </div>
@@ -612,22 +614,74 @@
                                 <div class="survey__question"><div class="survey__question-step">2.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_2" value="popup-survey-result-1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                        <input type="radio" name="survey_2" value="1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_2" value="popup-survey-result-1"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                        <input type="radio" name="survey_2" value="2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_2" value="popup-survey-result-2"><span class="radio__fake"></span> Средний ( мне под силу любой small-talk, но более сложные темы даются с трудом)
+                                        <input type="radio" name="survey_2" value="3"><span class="radio__fake"></span> Средний ( мне под силу любой small-talk, но более сложные темы даются с трудом)
                                     </label>
                                 </div>
                                 <div class="survey__option">
                                     <label class="radio">
-                                        <input type="radio" name="survey_2" value="popup-survey-result-2"><span class="radio__fake"></span> Продвинутый (читаю научные статьи, могу обсудить любую тему)
+                                        <input type="radio" name="survey_2" value="4"><span class="radio__fake"></span> Продвинутый (читаю научные статьи, могу обсудить любую тему)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="survey__form js-survey-step" data-step="3">
+                                <div class="survey__question"><div class="survey__question-step">3.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_3" value="1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_3" value="2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="survey__form js-survey-step" data-step="4">
+                                <div class="survey__question"><div class="survey__question-step">4.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_4" value="1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_4" value="2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="survey__form js-survey-step" data-step="5">
+                                <div class="survey__question"><div class="survey__question-step">5.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_5" value="1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_5" value="2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="survey__form js-survey-step" data-step="6">
+                                <div class="survey__question"><div class="survey__question-step">6.</div>Как бы вы оценили свой текущий уровень владения английским языком?</div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_6" value="1"><span class="radio__fake"></span> Нулевой ( никогда не изучал, не читаю)
+                                    </label>
+                                </div>
+                                <div class="survey__option">
+                                    <label class="radio">
+                                        <input type="radio" name="survey_6" value="2"><span class="radio__fake"></span> Начинающий ( куплю кофе, пройду check-in в отеле)
                                     </label>
                                 </div>
                             </div>
@@ -651,7 +705,7 @@
             <div class="popup-window__content">
                 <div class="popup-window__title">Записаться на урок</div>
                 <div class="mb-8">
-                    <button type="button" class="button button--md button--block js-popup-show" data-target="popup-signup-form">Первый бесплатный урок</button>
+                    <button type="button" class="button button--md button--block js-popup-show" data-target="popup-signup-form" data-subject="Контактная форма: Модальное окно с повторной записью">Первый бесплатный урок</button>
                 </div>
                 <div>
                     <button type="button" class="button button--md button--block js-popup-show" data-target="popup-signup-form-second">Повторная запись</button>
@@ -674,7 +728,7 @@
                 <a href="#">Отзывы</a>
                 <a href="#">Блог</a>
             </nav>
-            <button class="popup--nav__singup button button--md js-popup-show" data-target="popup-signup-form">Запись на урок</button>
+            <button class="popup--nav__singup button button--md js-popup-show" data-target="popup-signup-form" data-subject="Контактная форма: Боковое меню">Запись на урок</button>
         </div>
     </div>
 

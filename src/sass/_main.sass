@@ -320,7 +320,8 @@ ul
     letter-spacing: 0.2px
     font-weight: 600
 
-    &:hover:enabled
+    &:hover:not(:disabled)
+        color: white
         background: rgb(73, 174, 187)
 
     &--block
@@ -1361,6 +1362,7 @@ ul
 .timetable-item
     position: relative
     padding: 20px
+    cursor: pointer
     &__wrapper
         display: flex
         flex-direction: column

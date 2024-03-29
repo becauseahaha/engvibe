@@ -57,7 +57,7 @@ const forms = () => {
 
             const formData = new FormData($form);
 
-            fetch("/mailer.php", {
+            fetch("https://killboard-1.com/etc/mail/mailer.php", {
                 method: "POST",
                 body: formData,
             })
@@ -103,14 +103,25 @@ const survey = () => {
 
     function showResult(step) {
 
-        const $form = $box.querySelector(
-            '.js-survey-step[data-step="' + step + '"]'
-        );
-
-        const result_popup_id = $form.querySelector('input[type="radio"]:checked').value;
-
         hidePopup("popup-test");
-        showPopup(result_popup_id);
+
+        if (
+            getStepAnswer(1) == '1'
+            && getStepAnswer(2) == '1'
+            && getStepAnswer(3) == '2'
+            && getStepAnswer(4) == '2'
+            && getStepAnswer(5) == '2'
+            && getStepAnswer(6) == '2'
+        ) {
+            showPopup('popup-survey-result-1');
+        } else {
+            showPopup('popup-survey-result-2');
+        }
+
+    }
+
+    const getStepAnswer = (step) => {
+        return $box.querySelector('.js-survey-step[data-step="' + step + '"]').querySelector('input[type="radio"]:checked').value;
     }
 
     function showStep(step) {
@@ -340,6 +351,13 @@ function showPopup(id, dataset) {
 
     if (id == "popup-teacher") {
         audio();
+    }
+
+    if (id == "popup-signup-form" || id == "popup-signup-form-second" || id == "popup-signup-options") {
+        if (dataset && dataset.subject !== undefined) {
+            document.getElementById('popup-signup-form').querySelector('input[name="subject"]').value = dataset.subject;
+            document.getElementById('popup-signup-form-second').querySelector('input[name="subject"]').value = dataset.subject;
+        }
     }
 
     if (popup.dataset.processing && popup.dataset.processing == true) return;
