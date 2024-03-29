@@ -12,7 +12,7 @@ header('Content-Type: application/json; charset=utf-8');
 require 'PHPMailer/loader.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 try {
