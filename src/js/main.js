@@ -1,12 +1,12 @@
-if (window.innerWidth >= 768) {
-    const msnry = new Masonry(".stories__items", {
-        itemSelector: ".stories-item",
-        columnWidth: ".stories-item--width",
-        gutter: ".stories-item--gap",
-        horizontalOrder: true,
-        percentPosition: true,
-    });
-}
+// if (window.innerWidth >= 768) {
+//     const msnry = new Masonry(".stories__items", {
+//         itemSelector: ".stories-item",
+//         columnWidth: ".stories-item--width",
+//         gutter: ".stories-item--gap",
+//         horizontalOrder: true,
+//         percentPosition: true,
+//     });
+// }
 
 const forms = () => {
     const $forms = document.querySelectorAll(".js-mail-form");
@@ -130,6 +130,14 @@ const survey = () => {
         );
         if (!$form) return;
 
+        if (step <= 2) {
+            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-1.jpg)';
+        } else if (step <= 4) {
+            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-2.jpg)';
+        } else if (step <= 6) {
+            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-3.jpg)';
+        }
+
         is_last = step == steps_total;
 
         $steps.querySelectorAll(".js-survey-step").forEach((element) => {
@@ -243,6 +251,9 @@ const videos = () => {
             if (this.classList.contains("is-active") == false) {
                 this.classList.add("is-active");
                 this.querySelector("video").play();
+                this.querySelector("video").addEventListener('ended', () => {
+                    el.classList.remove("is-active");
+                })
             }
         });
     });
@@ -346,6 +357,7 @@ function showPopup(id, dataset) {
     if (id != "popup-nav") hidePopup("popup-nav");
     if (id != "popup-signup-options") hidePopup("popup-signup-options");
     if (id != "popup-survey-result-1") hidePopup("popup-survey-result-1");
+    if (id != "popup-survey-result-2") hidePopup("popup-survey-result-2");
     if (id != "popup-lesson") hidePopup("popup-lesson");
     if (id != "popup-teacher") hidePopup("popup-teacher");
 
@@ -353,11 +365,9 @@ function showPopup(id, dataset) {
         audio();
     }
 
-    if (id == "popup-signup-form" || id == "popup-signup-form-second" || id == "popup-signup-options") {
-        if (dataset && dataset.subject !== undefined) {
-            document.getElementById('popup-signup-form').querySelector('input[name="subject"]').value = dataset.subject;
-            document.getElementById('popup-signup-form-second').querySelector('input[name="subject"]').value = dataset.subject;
-        }
+    if (dataset && dataset.subject !== undefined) {
+        document.getElementById('popup-signup-form').querySelector('input[name="subject"]').value = dataset.subject;
+        document.getElementById('popup-signup-form-second').querySelector('input[name="subject"]').value = dataset.subject;
     }
 
     if (popup.dataset.processing && popup.dataset.processing == true) return;
@@ -389,6 +399,20 @@ function showPopup(id, dataset) {
     }
 }
 
+function recalcPrices($container) {
+
+    const tab = $container.querySelector('.js-tabs-button.is-active');
+    const prices = JSON.parse(tab.dataset.prices)['prices'];
+
+    let i = 0;
+
+    $container.querySelectorAll('.prices-item__price-number').forEach((el) => {
+        el.querySelector('span').textContent = prices[i];
+        i++;
+    })
+
+}   
+
 const tabsInit = () => {
     const tabs = document.querySelectorAll(".js-tabs");
 
@@ -403,6 +427,7 @@ const tabsInit = () => {
 
         tabButtons.forEach((tab) => {
             tab.addEventListener("click", (e) => {
+
                 const id = e.target.dataset.id;
 
                 if (id) {
@@ -419,6 +444,15 @@ const tabsInit = () => {
 
                     const element = document.getElementById(id);
                     element.classList.add("is-active");
+
+                }
+
+                if (e.target.dataset.prices) {
+                    tabButtons.forEach((btn) => {
+                        btn.classList.remove("is-active");
+                    });
+                    e.target.classList.add("is-active");
+                    recalcPrices(el);
                 }
             });
         });

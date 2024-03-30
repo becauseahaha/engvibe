@@ -36,7 +36,7 @@
 
         <section class="content-grid section section--main-inner main-inner bg-red">
             <div class="breadcrumbs">
-                <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__link-fake">Занятия</span>
+                <a href="index.html" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__link-fake">Занятия</span>
             </div>
             <div class="section__wrapper">
                 <div class="main-inner__left">
@@ -56,12 +56,7 @@
             <div class="section__title process__title text-center">Как проходят занятия?</div>
             <div class="process__items">
                 <div class="process-item bg-blue">
-                    <div class="video" style="--bg: url('../images/video-2.jpeg')">
-                        <span class="video-play"></span>
-                        <video width="100%" height="100%" controls  preload="none">
-                            <source src="video.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                    <div class="process-item__header" style="--bg: url('../images/video-2.jpeg')"></div>
                     <div class="process-item__body">
                         <div class="process-item__title">Шаг 1</div>
                         <div class="process-item__bubble">До занятия</div>
@@ -109,20 +104,20 @@
             </div>
         </section>
         <section class="content-grid full-width section section--nopadding section--prices prices bg-yellow">
-            <div class="section__wrapper">
+            <div class="section__wrapper js-tabs">
                 <div class="section__title prices__title text-center">Стоимость</div>
                 <div class="prices__picker">
-                    <button class="prices__picker-btn tag tag--active">5 уроков</button>
-                    <button class="prices__picker-btn tag">10 уроков</button>
-                    <button class="prices__picker-btn tag">20 уроков</button>
-                    <button class="prices__picker-btn tag">40 уроков</button>
-                    <button class="prices__picker-btn tag" disabled>80 уроков</button>
+                    <button class="prices__picker-btn tag is-active js-tabs-button" data-prices='{"prices":["890", "1 150", "1 350"]}'>5 уроков</button>
+                    <button class="prices__picker-btn tag js-tabs-button" data-prices='{"prices":["700", "1 000", "1 200"]}'>10 уроков</button>
+                    <button class="prices__picker-btn tag js-tabs-button" data-prices='{"prices":["600", "900", "1 100"]}'>20 уроков</button>
+                    <button class="prices__picker-btn tag js-tabs-button" data-prices='{"prices":["500", "800", "900"]}'>40 уроков</button>
+                    <button class="prices__picker-btn tag js-tabs-button" data-prices='{"prices":["400", "700", "800"]}'>80 уроков</button>
                 </div>
-                <div class="prices__items">
+                <div class="prices__items js-tabs-content">
                     <div class="prices-item">
                         <div class="prices-item__title">Стандартный</div>
                         <div class="prices-item__body">
-                            <div class="prices-item__price">от<span class="prices-item__price-number"> 890 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> <span>890</span> ₽ </span><span class="prices-item__price-muted">за урок</span></div>
                             <div class="prices-item__benefits">
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
@@ -134,7 +129,7 @@
                     <div class="prices-item">
                         <div class="prices-item__title">Продвинутый</div>
                         <div class="prices-item__body">
-                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 150 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> <span>1 150</span> ₽ </span><span class="prices-item__price-muted">за урок</span></div>
                             <div class="prices-item__benefits">
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
@@ -147,7 +142,7 @@
                     <div class="prices-item">
                         <div class="prices-item__title prices-item__title--highlighted">Премиум</div>
                         <div class="prices-item__body">
-                            <div class="prices-item__price">от<span class="prices-item__price-number"> 1 350 ₽ </span><span class="prices-item__price-muted">за урок</span></div>
+                            <div class="prices-item__price">от<span class="prices-item__price-number"> <span>1 350</span> ₽ </span><span class="prices-item__price-muted">за урок</span></div>
                             <div class="prices-item__benefits">
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-hat"></use></svg> Персональные уроки с квалифицированными преподавателями</div>
                                 <div class="prices-item__benefit"><svg class="icon-svg" viewBox="0 0 24 24"><use href="#icon-benefit-cloud"></use></svg> Неограниченный доступ к урокам и интерактивным тренажерам</div>
@@ -259,17 +254,17 @@
                             <div class="teachers-item__header">
                                 <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
                                 <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play" style="display: none;">
+                                    <div class="audio js-audio">
+                                        <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                                        <div class="audio__play is-active">
                                             <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                            <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                                         </div>
-                                        <div class="audio-controls__pause">
+                                        <div class="audio__pause">
                                             <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
+                                            <div class="audio__progress audio__duration"></div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="teachers-item__body">
@@ -285,17 +280,17 @@
                             <div class="teachers-item__header">
                                 <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
                                 <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play" style="display: none;">
+                                    <div class="audio js-audio">
+                                        <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                                        <div class="audio__play is-active">
                                             <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                            <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                                         </div>
-                                        <div class="audio-controls__pause">
+                                        <div class="audio__pause">
                                             <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
+                                            <div class="audio__progress audio__duration"></div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="teachers-item__body">
@@ -311,17 +306,17 @@
                             <div class="teachers-item__header">
                                 <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
                                 <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
+                                    <div class="audio js-audio">
+                                        <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                                        <div class="audio__play is-active">
                                             <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                            <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                                         </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
+                                        <div class="audio__pause">
+                                            <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                            <div class="audio__progress audio__duration"></div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="teachers-item__body">
@@ -337,17 +332,17 @@
                             <div class="teachers-item__header">
                                 <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
                                 <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
+                                    <div class="audio js-audio">
+                                        <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                                        <div class="audio__play is-active">
                                             <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                            <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                                         </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
+                                        <div class="audio__pause">
+                                            <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                            <div class="audio__progress audio__duration"></div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="teachers-item__body">
@@ -363,17 +358,17 @@
                             <div class="teachers-item__header">
                                 <div class="image-gradient-border teachers-item__image-border"><img src="./images/teacher-1.jpeg" class="teachers-item__image"></div>
                                 <div>
-                                    <div class="audio-controls">
-                                        <div class="audio-controls__play">
+                                    <div class="audio js-audio">
+                                        <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" type="audio/mpeg"></audio>
+                                        <div class="audio__play is-active">
                                             <button class="button-audio"><svg class="icon-svg" viewBox="0 0 12 12"><use href="#icon-audio-play"></use></svg></button>
-                                            <div class="audio-controls__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
+                                            <div class="audio__progress"><svg class="icon-svg" viewBox="0 0 22 20"><use href="#icon-audio-waves"></use></svg></div>
                                         </div>
-                                        <div class="audio-controls__pause" style="display: none;">
-                                            <button class="button-audio button-audio--pause" style="display: none;"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
-                                            <div class="audio-controls__progress">00:40</div>
+                                        <div class="audio__pause">
+                                            <button class="button-audio button-audio--pause"><svg class="icon-svg" viewBox="0 0 16 16"><use href="#icon-audio-pause"></use></svg></button>
+                                            <div class="audio__progress audio__duration"></div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <div class="teachers-item__body">
