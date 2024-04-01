@@ -57,7 +57,7 @@ const forms = () => {
 
             const formData = new FormData($form);
 
-            fetch("https://killboard-1.com/etc/mail/mailer.php", {
+            fetch("../mailer.php", {
                 method: "POST",
                 body: formData,
             })

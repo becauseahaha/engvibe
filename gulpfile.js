@@ -12,7 +12,7 @@ let argv = yargs.default({
 	cache: true,
 	debug: true,
 	fix: false,
-	minify: true,
+	minify: false,
 	notify: true,
 	open: true,
 	port: 3000,
