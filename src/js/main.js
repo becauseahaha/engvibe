@@ -264,6 +264,10 @@ const videos = () => {
                 this.querySelector("video").addEventListener("ended", () => {
                     el.classList.remove("is-active");
                 });
+                this.querySelector("video").addEventListener("pause", function() {
+                    if (this.readyState == 4) // trigger only on pause, not on seeked
+                        el.classList.remove("is-active");
+                });
             }
         });
     });
