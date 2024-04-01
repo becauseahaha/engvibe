@@ -39,14 +39,14 @@ const forms = () => {
                     $name.classList.remove("is-error");
                 }
             }
-            if ($email) {
-                if ($email.value.length == 0) {
-                    $email.classList.add("is-error");
-                    $form.dataset.errors++;
-                } else {
-                    $email.classList.remove("is-error");
-                }
-            }
+            // if ($email) {
+            //     if ($email.value.length == 0) {
+            //         $email.classList.add("is-error");
+            //         $form.dataset.errors++;
+            //     } else {
+            //         $email.classList.remove("is-error");
+            //     }
+            // }
 
             if ($form.dataset.errors > 0) {
                 $form.querySelector(".js-warning").style.display = "block";

@@ -32,6 +32,7 @@ try {
     }
 
     $message = '';
+    if (!empty($_POST['subject'])) $message .= "<p>Форма: <b>{$_POST['subject']}</b></p><br>";
     if (!empty($_POST['name'])) $message .= "<p>Имя: <b>{$_POST['name']}</b></p>";
     if (!empty($_POST['email'])) $message .= "<p>Email: <b>{$_POST['email']}</b></p>";
     if (!empty($_POST['phone'])) $message .= "<p>Телефон: <b>{$_POST['phone']}</b></p>";
