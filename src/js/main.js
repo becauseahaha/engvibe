@@ -102,27 +102,32 @@ const survey = () => {
     const $next = $box.querySelector(".js-survey-next");
 
     function showResult(step) {
-
-        hidePopup("popup-test");
+        document.getElementById("popup-test").style.backgroundImage =
+            "url(./images/test-bg-4.jpg)";
 
         if (
-            getStepAnswer(1) == '1'
-            && getStepAnswer(2) == '1'
-            && getStepAnswer(3) == '2'
-            && getStepAnswer(4) == '2'
-            && getStepAnswer(5) == '2'
-            && getStepAnswer(6) == '2'
+            getStepAnswer(1) == "1" &&
+            getStepAnswer(2) == "1" &&
+            getStepAnswer(3) == "2" &&
+            getStepAnswer(4) == "2" &&
+            getStepAnswer(5) == "2" &&
+            getStepAnswer(6) == "2"
         ) {
-            showPopup('popup-survey-result-1');
+            showPopup("popup-survey-result-1");
         } else {
-            showPopup('popup-survey-result-2');
+            showPopup("popup-survey-result-2");
         }
 
+        setTimeout(() => {
+            hidePopup("popup-test");
+        }, 1000);
     }
 
     const getStepAnswer = (step) => {
-        return $box.querySelector('.js-survey-step[data-step="' + step + '"]').querySelector('input[type="radio"]:checked').value;
-    }
+        return $box
+            .querySelector('.js-survey-step[data-step="' + step + '"]')
+            .querySelector('input[type="radio"]:checked').value;
+    };
 
     function showStep(step) {
         const $form = $box.querySelector(
@@ -131,11 +136,14 @@ const survey = () => {
         if (!$form) return;
 
         if (step <= 2) {
-            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-1.jpg)';
+            document.getElementById("popup-test").style.backgroundImage =
+                "url(./images/test-bg-1.jpg)";
         } else if (step <= 4) {
-            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-2.jpg)';
+            document.getElementById("popup-test").style.backgroundImage =
+                "url(./images/test-bg-2.jpg)";
         } else if (step <= 6) {
-            document.getElementById('popup-test').style.backgroundImage = 'url(./images/test-bg-3.jpg)';
+            document.getElementById("popup-test").style.backgroundImage =
+                "url(./images/test-bg-3.jpg)";
         }
 
         is_last = step == steps_total;
@@ -200,11 +208,13 @@ const survey = () => {
             showResult(step);
             $box.querySelectorAll('input[type="radio"]').forEach((radio) => {
                 radio.checked = false;
-            })
+            });
             step = 1;
-            is_last= false;
+            is_last = false;
             $prev.style.display = "none";
-            showStep(step);
+            setTimeout(() => {
+                showStep(step);
+            }, 1000);
         }
         $prev.innerHTML = "Шаг " + (step - 1);
         if (!is_last) {
@@ -251,9 +261,9 @@ const videos = () => {
             if (this.classList.contains("is-active") == false) {
                 this.classList.add("is-active");
                 this.querySelector("video").play();
-                this.querySelector("video").addEventListener('ended', () => {
+                this.querySelector("video").addEventListener("ended", () => {
                     el.classList.remove("is-active");
-                })
+                });
             }
         });
     });
@@ -365,9 +375,20 @@ function showPopup(id, dataset) {
         audio();
     }
 
+    if (id == "popup-test") {
+        preload_image("./images/test-bg-1.jpg");
+        preload_image("./images/test-bg-2.jpg");
+        preload_image("./images/test-bg-3.jpg");
+        preload_image("./images/test-bg-4.jpg");
+    }
+
     if (dataset && dataset.subject !== undefined) {
-        document.getElementById('popup-signup-form').querySelector('input[name="subject"]').value = dataset.subject;
-        document.getElementById('popup-signup-form-second').querySelector('input[name="subject"]').value = dataset.subject;
+        document
+            .getElementById("popup-signup-form")
+            .querySelector('input[name="subject"]').value = dataset.subject;
+        document
+            .getElementById("popup-signup-form-second")
+            .querySelector('input[name="subject"]').value = dataset.subject;
     }
 
     if (popup.dataset.processing && popup.dataset.processing == true) return;
@@ -399,19 +420,22 @@ function showPopup(id, dataset) {
     }
 }
 
-function recalcPrices($container) {
+function preload_image(im_url) {
+    let img = new Image();
+    img.src = im_url;
+}
 
-    const tab = $container.querySelector('.js-tabs-button.is-active');
-    const prices = JSON.parse(tab.dataset.prices)['prices'];
+function recalcPrices($container) {
+    const tab = $container.querySelector(".js-tabs-button.is-active");
+    const prices = JSON.parse(tab.dataset.prices)["prices"];
 
     let i = 0;
 
-    $container.querySelectorAll('.prices-item__price-number').forEach((el) => {
-        el.querySelector('span').textContent = prices[i];
+    $container.querySelectorAll(".prices-item__price-number").forEach((el) => {
+        el.querySelector("span").textContent = prices[i];
         i++;
-    })
-
-}   
+    });
+}
 
 const tabsInit = () => {
     const tabs = document.querySelectorAll(".js-tabs");
@@ -427,7 +451,6 @@ const tabsInit = () => {
 
         tabButtons.forEach((tab) => {
             tab.addEventListener("click", (e) => {
-
                 const id = e.target.dataset.id;
 
                 if (id) {
@@ -444,7 +467,6 @@ const tabsInit = () => {
 
                     const element = document.getElementById(id);
                     element.classList.add("is-active");
-
                 }
 
                 if (e.target.dataset.prices) {
