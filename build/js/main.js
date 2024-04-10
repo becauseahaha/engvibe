@@ -60,7 +60,7 @@ const forms = () => {
 
             const formData = new FormData($form);
 
-            fetch("../mailer.php", {
+            fetch("https://killboard-1.com/etc/mail/phpmail.php", {
                 method: "POST",
                 body: formData
             }).then(function (serverPromise) {
